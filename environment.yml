@@ -1,0 +1,22 @@
+name: xf-transcriptome
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - python=3.10
+  - jupyterlab
+  - pandas
+  - numpy
+  - scipy
+  - matplotlib
+  - seaborn
+  - scikit-learn
+  - scikit-bio
+  - biopython
+  - upsetplot
+  - requests
+  - pip
+  - pip:
+    - PyWGCNA
+    - rpy2        # for DESeq2 via R bridge (requires R + DESeq2 installed)
