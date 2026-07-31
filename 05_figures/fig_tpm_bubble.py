@@ -1,8 +1,7 @@
 """
-fig_tpm_bubble.py — TPM expression distribution bubble plot (Figure 1 /
-Supplementary).
+fig_tpm_bubble.py — TPM expression distribution bubble plot (Figure 2B).
 
-For each condition the script plots a bubble whose:
+For each condition, the script plots a bubble whose:
   - x-axis  = condition label (grouped by strain/medium/time)
   - y-axis  = mean log2(TPM+1) across replicates
   - size    = percentage of expressed genes (TPM ≥ 1 cutoff)
