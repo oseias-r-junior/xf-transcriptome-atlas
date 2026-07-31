@@ -36,6 +36,11 @@ dependencies:
   # HTTP (QuickGO API)
   - requests>=2.31
 
+  # Network visualisation
+  - networkx>=3.1
+  - pip:
+    - adjustText>=1.1
+
   # Notebook support (optional, for exploratory work)
   - jupyter
   - ipykernel
