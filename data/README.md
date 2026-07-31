@@ -1,42 +1,91 @@
-# Data Access
+# Data directory
 
-## SRA (public after 2026-10-01)
+This directory holds the input data files required to run the pipeline.
+**Raw data are not included in this repository** to respect data-sharing
+agreements and file-size constraints. The table below describes the expected
+format and origin of each file.
 
-All 24 raw RNA-Seq libraries are deposited at:  
-**BioProject: [PRJNA1344811](https://www.ncbi.nlm.nih.gov/sra/PRJNA1344811)**
+Place the corresponding files at the paths indicated before running any script.
 
-Download with SRA Toolkit:
-```bash
-# Install SRA toolkit, then:
-prefetch PRJNA1344811
-fasterq-dump --outdir fastq/ SRR46283131  # repeat for each run
+---
+
+## Required files
+
+### Expression data
+
+| File | Format | Description |
+|------|--------|-------------|
+| `tpm_expression.csv` | CSV, genes × samples | TPM values computed by `01_preprocessing/compute_tpm.py`. Gene IDs from CLC Genomics Workbench IMG locus tags. |
+| `raw_counts_combined.tsv` | TSV, genes × samples | Raw read counts (integer) used as input for DESeq2. |
+
+Example header for `tpm_expression.csv`:
+```
+gene_id,9a5c_PIM6_1d_1,9a5c_PIM6_1d_2,9a5c_PIM6_1d_3,...
+Xf9a_00001,45.3,48.1,41.7,...
 ```
 
-## Local data structure (for notebook execution)
+### Sample metadata
 
-Set `DATA_DIR` in each notebook to the root of your local data folder:
+| File | Format | Description |
+|------|--------|-------------|
+| `sample_info.csv` | CSV, samples × traits | One row per sample. Required columns: `sample_id`, `condition`, `strain`, `medium`, `timepoint`. Binary trait columns (`is_mobile`, `is_sessile`, `is_early`, `is_late`) are used for WGCNA module–trait correlations. |
 
+Example:
 ```
-DATA_DIR/
-├── Arquivos brutos/
-│   ├── TPM/              # TPM tables per sample (*.csv)
-│   ├── FPKM/             # FPKM tables per sample
-│   └── genomes_9a5c_temecula1/   # Reference GBK/FASTA files
-│       ├── 9a5c.gbff
-│       ├── Temecula1.gbff
-│       └── 9a5c_vs_Temecula1_rbh.csv
-├── DeSeq2/
-│   ├── *.txt             # Raw count tables (24 files: strain_medium_day_replicate)
-│   ├── gene_dictionary.csv
-│   ├── virulence_table.csv
-│   └── DESeq2_results/   # Output tables from DESeq2
-└── Supplementary tables/
-    └── Pierry_Feitosa_et_al_2025_supplementary tables.xlsx
+sample_id,condition,strain,medium,timepoint,is_mobile,is_sessile
+9a5c_PIM6_1d_1,9a5c_PIM6_1d,9a5c,PIM6,1d,0,0
 ```
 
-## Reference genomes
+### Reference genome files
 
-| Strain | GenBank accession | Description |
-|--------|-------------------|-------------|
-| 9a5c   | AE003849 + AE003850 | *X. fastidiosa* 9a5c chromosome + pXF51 plasmid |
-| Temecula1 | AE009442 | *X. fastidiosa* Temecula1 |
+| File | Format | Description |
+|------|--------|-------------|
+| `9a5c.gbff` | GenBank flat file | *X. fastidiosa* 9a5c annotated genome (RefSeq/NCBI). |
+| `temecula1.gbff` | GenBank flat file | *X. fastidiosa* Temecula1 annotated genome. |
+
+Both files are available from NCBI under their respective accession numbers.
+
+### Cross-strain gene dictionary
+
+| File | Format | Description |
+|------|--------|-------------|
+| `gene_dictionary.tsv` | TSV | Output of `01_preprocessing/build_gene_dictionary.py`. Columns: `9a5c_IMG_ID`, `9a5c_old_locus_tags`, `Temecula1_IMG_ID`, `Temecula1_old_locus_tags`, `identity_pct`. |
+
+### Comparisons list
+
+| File | Format | Description |
+|------|--------|-------------|
+| `comparisons.tsv` | TSV, two columns, no header | Each row is a pairwise comparison: `condition_1<TAB>condition_2`. Condition names must match the `condition` column in `sample_info.csv`. |
+
+### Virulence gene table
+
+| File | Format | Description |
+|------|--------|-------------|
+| `virulence_table.csv` | CSV | One row per virulence-associated gene. Required columns: `gene_id`, `gene_name`, `function`, `phase`, `source`. Phase codes: 0=unspecific, 1=mobile, 2=sessile, 3=early, 4=late. |
+
+### GO term resources
+
+| File | Format | Description |
+|------|--------|-------------|
+| `dictionary_2_level.csv` | CSV, no header | Level-2 GO term dictionary. Columns: `level`, `category_name`, `GO_id`, `term`, `relation`. Used by `03_go_enrichment/build_go_heatmap.py`. |
+
+---
+
+## Directory layout expected by scripts
+
+```
+data/
+├── tpm_expression.csv
+├── raw_counts_combined.tsv
+├── sample_info.csv
+├── comparisons.tsv
+├── gene_dictionary.tsv
+├── virulence_table.csv
+├── dictionary_2_level.csv
+├── 9a5c.gbff
+└── temecula1.gbff
+```
+
+All scripts accept `--tpm`, `--metadata`, `--dictionary` and similar arguments
+so paths are fully configurable. The paths above are the defaults used in
+`README.md` usage examples.
