@@ -1,6 +1,6 @@
 """
 fig_virulence_trends.py — TPM expression trend lines for virulence-associated
-genes across growth phases (Figure 4D).
+genes across growth phases (Figure 2B).
 
 For each gene the script plots mean log2(TPM+1) across conditions ordered
 by a user-defined progression (e.g. early → mobile → sessile timepoints).
