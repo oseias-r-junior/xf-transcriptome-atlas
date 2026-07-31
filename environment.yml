@@ -3,20 +3,47 @@ channels:
   - conda-forge
   - bioconda
   - defaults
+
 dependencies:
-  - python=3.10
-  - jupyterlab
-  - pandas
-  - numpy
-  - scipy
-  - matplotlib
-  - seaborn
-  - scikit-learn
-  - scikit-bio
-  - biopython
-  - upsetplot
-  - requests
+  # Core Python
+  - python=3.11
   - pip
+
+  # Data science
+  - numpy>=1.24
+  - pandas>=2.0
+  - scipy>=1.10
+  - scikit-learn>=1.3
+  - statsmodels>=0.14
+
+  # Bioinformatics
+  - biopython>=1.81
+  - scikit-bio>=0.5.9
+
+  # Differential expression (pip-only)
   - pip:
-    - PyWGCNA
-    - rpy2        # for DESeq2 via R bridge (requires R + DESeq2 installed)
+    - pydeseq2>=0.4.9
+    - PyWGCNA>=1.1.3
+
+  # Visualisation
+  - matplotlib>=3.7
+  - seaborn>=0.13
+  - upsetplot>=0.9
+
+  # Network export
+  - networkx>=3.1
+
+  # HTTP (QuickGO API)
+  - requests>=2.31
+
+  # Notebook support (optional, for exploratory work)
+  - jupyter
+  - ipykernel
+
+# ── Installation ──────────────────────────────────────────────────────────────
+# 1.  conda env create -f environment.yml
+# 2.  conda activate xf-transcriptome
+#
+# To update an existing environment:
+#     conda env update -f environment.yml --prune
+# ─────────────────────────────────────────────────────────────────────────────
