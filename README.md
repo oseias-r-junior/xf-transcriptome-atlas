@@ -34,10 +34,14 @@ RAW DATA
    │
    ▼
 05_figures/
-   ├─ fig_pcoa.py               Bray-Curtis PCoA + PERMANOVA/PERMDISP
-   ├─ fig_tpm_bubble.py         TPM distribution bubble plot
-   ├─ fig_virulence_clustermap.py  Log2FC heatmap (phase-ordered)
-   └─ fig_virulence_trends.py   TPM trend lines per virulence phase
+   ├─ fig_pearson_heatmap.py    Pearson r clustermap between conditions (Fig S1)
+   ├─ fig_pcoa.py               Bray-Curtis PCoA + PERMANOVA/PERMDISP (Fig 2A)
+   ├─ fig_tpm_bubble.py         TPM distribution bubble plot (Fig 2B)
+   ├─ fig_upset.py              UpSet plot of expressed-gene intersections (Fig 2C)
+   ├─ fig_top100_shared.py      Mean TPM of top 100 RBH shared genes (Fig 3A)
+   ├─ fig_virulence_trends.py   TPM trend lines per virulence phase (Fig 3B)
+   ├─ fig_virulence_clustermap.py  Log2FC heatmap, phase-ordered (Fig 4A)
+   └─ fig_go_bubble.py          Combined GO bubble — DESeq2 + WGCNA modules (Fig 4C)
 ```
 
 ---
@@ -59,10 +63,14 @@ xf-transcriptome-atlas/
 │   ├── run_wgcna.py
 │   └── build_coexpression_network.py
 ├── 05_figures/
+│   ├── fig_pearson_heatmap.py
 │   ├── fig_pcoa.py
 │   ├── fig_tpm_bubble.py
+│   ├── fig_upset.py
+│   ├── fig_top100_shared.py
+│   ├── fig_virulence_trends.py
 │   ├── fig_virulence_clustermap.py
-│   └── fig_virulence_trends.py
+│   └── fig_go_bubble.py
 ├── data/
 │   └── README.md               ← expected file formats and origins
 ├── environment.yml
@@ -157,6 +165,30 @@ python 04_wgcna/build_coexpression_network.py \
 ### 5 · Figures
 
 ```bash
+# Fig S1 — Pearson correlation clustermap
+python 05_figures/fig_pearson_heatmap.py \
+    --correlation-csv data/pearson_correlation.csv \
+    --output          figures/fig_S1_pearson_heatmap.tiff
+# (or compute from TPM: --tpm data/tpm_expression.csv --metadata data/sample_info.csv)
+
+# Fig 3A — Top 100 shared genes (mean TPM)
+python 05_figures/fig_top100_shared.py \
+    --tpm        data/tpm_expression.csv \
+    --metadata   data/sample_info.csv \
+    --dictionary data/gene_dictionary.tsv \
+    --top-n      100 \
+    --output     figures/fig_3A_top100_shared.tiff
+
+# Fig 2C — UpSet plot of expressed-gene intersections
+python 05_figures/fig_upset.py \
+    --tpm          data/tpm_expression.csv \
+    --metadata     data/sample_info.csv \
+    --condition-col condition \
+    --strain-col   strain \
+    --tpm-min      0 \
+    --sort-by      degree \
+    --output       figures/fig_2C_upset.tiff
+
 # Fig 2 — PCoA
 python 05_figures/fig_pcoa.py \
     --tpm      data/tpm_expression.csv \
@@ -176,6 +208,14 @@ python 05_figures/fig_virulence_clustermap.py \
     --virulence-table data/virulence_table.csv \
     --deseq-dir       results/DESeq2_results \
     --output          figures/fig_4A_virulence_clustermap.tiff
+
+# Fig 4C — Combined GO enrichment bubble (DESeq2 + WGCNA modules)
+python 05_figures/fig_go_bubble.py \
+    --deseq-dir    results/DESeq2_results \
+    --wgcna-dir    results/WGCNA_go \
+    --top-n-terms  30 \
+    --color-by     ontology \
+    --output       figures/fig_4C_go_bubble.tiff
 
 # Fig 4D — Virulence gene expression trends
 python 05_figures/fig_virulence_trends.py \
