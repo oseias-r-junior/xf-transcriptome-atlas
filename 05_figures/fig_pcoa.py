@@ -1,6 +1,6 @@
 """
 fig_pcoa.py — Principal Coordinates Analysis (PCoA) of TPM expression profiles
-with PERMANOVA and PERMDISP significance tests (Figure 2 / Supplementary).
+with PERMANOVA and PERMDISP significance tests (Figure 2).
 
 Distance metric: Bray-Curtis dissimilarity on log2(TPM+1)-transformed data.
 
