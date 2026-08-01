@@ -203,9 +203,10 @@ python 05_figures/fig_tpm_bubble.py \
     --colour-col strain \
     --output     figures/fig_tpm_bubble.tiff
 
-# Fig 4A — Virulence gene log2FC clustermap (phase-ordered)
+# Fig 4A — Virulence gene log2FC clustermap (groups A/B/C, significant-only)
 python 05_figures/fig_virulence_clustermap.py \
     --virulence-table data/virulence_table.csv \
+    --gene-dict       data/gene_dictionary.csv \
     --deseq-dir       results/DESeq2_results \
     --output          figures/fig_4A_virulence_clustermap.tiff
 
