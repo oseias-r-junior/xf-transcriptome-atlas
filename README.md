@@ -14,34 +14,34 @@ RAW DATA
    │
    ▼
 01_preprocessing/
-   ├─ compute_tpm.py               Raw counts / FPKM  →  TPM matrix
-   └─ build_gene_dictionary.py     RBH BLASTP  →  cross-strain gene dictionary
+   ├─ compute_tpm.py            Raw counts / FPKM  →  TPM matrix
+   └─ build_gene_dictionary.py  RBH BLASTP  →  cross-strain gene dictionary
    │
    ▼
 02_differential_expression/
-   └─ run_deseq2.py                PyDESeq2  →  per-comparison DEG tables
+   └─ run_deseq2.py             PyDESeq2  →  per-comparison DEG tables
    │
    ▼
 03_go_enrichment/
-   ├─ parse_go_from_genbank.py     GenBank  →  GO annotation table
-   ├─ run_go_enrichment.py         Fisher + BH FDR  →  enriched GO terms
-   └─ build_go_heatmap.py          QuickGO API + signed score  →  GO heatmap
+   ├─ parse_go_from_genbank.py  GenBank  →  GO annotation table
+   ├─ run_go_enrichment.py      Fisher + BH FDR  →  enriched GO terms
+   └─ build_go_heatmap.py       QuickGO API + signed score  →  GO heatmap
    │
    ▼
 04_wgcna/
-   ├─ run_wgcna.py                 PyWGCNA  →  modules, MEs, kME, trait correlations
+   ├─ run_wgcna.py              PyWGCNA  →  modules, MEs, kME, trait correlations
    └─ build_coexpression_network.py  →  edge/node tables for Cytoscape / Gephi
    │
    ▼
 05_figures/
-   ├─ fig_pearson_heatmap.py       Pearson r clustermap between conditions (Fig S1)
-   ├─ fig_pcoa.py                  Bray-Curtis PCoA + PERMANOVA/PERMDISP (Fig 2A)
-   ├─ fig_tpm_bubble.py            TPM distribution bubble plot (Fig 2B)
-   ├─ fig_upset.py                 UpSet plot of expressed-gene intersections (Fig 2C)
-   ├─ fig_top100_shared.py         Mean TPM of top 100 RBH shared genes (Fig 3A)
-   ├─ fig_virulence_trends.py      TPM trend lines per virulence phase (Fig 3B)
+   ├─ fig_pearson_heatmap.py    Pearson r clustermap between conditions (Fig S1)
+   ├─ fig_pcoa.py               Bray-Curtis PCoA + PERMANOVA/PERMDISP (Fig 2A)
+   ├─ fig_tpm_bubble.py         TPM distribution bubble plot (Fig 2B)
+   ├─ fig_upset.py              UpSet plot of expressed-gene intersections (Fig 2C)
+   ├─ fig_top100_shared.py      Mean TPM of top 100 RBH shared genes (Fig 3A)
+   ├─ fig_virulence_trends.py   TPM trend lines per virulence phase (Fig 3B)
    ├─ fig_virulence_clustermap.py  Log2FC heatmap, phase-ordered (Fig 4A)
-   └─ fig_go_bubble.py             Combined GO bubble — DESeq2 + WGCNA modules (Fig 4C)
+   └─ fig_go_bubble.py          Combined GO bubble — DESeq2 + WGCNA modules (Fig 4C)
 ```
 
 ---
@@ -155,11 +155,13 @@ python 04_wgcna/run_wgcna.py \
     --outdir   results/WGCNA
 
 python 04_wgcna/build_coexpression_network.py \
-    --expr        results/WGCNA/expr_log.csv \
-    --assignments results/WGCNA/module_assignments.csv \
-    --kme         results/WGCNA/kME.csv \
-    --min-cor     0.80 \
-    --outdir      results/network
+    --expr            results/WGCNA/expr_log.csv \
+    --assignments     results/WGCNA/module_assignments.csv \
+    --kme             results/WGCNA/kME.csv \
+    --min-cor         0.80 \
+    --gene-dict       data/gene_dictionary.csv \
+    --virulence-table data/virulence_table.csv \
+    --outdir          results/network
 ```
 
 ### 5 · Figures
