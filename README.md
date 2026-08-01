@@ -1,7 +1,7 @@
 # xf-transcriptome-atlas
 
 Reproducible bioinformatics pipeline for **Pierry et al. (2026)**:  
-*"Transcriptome atlas of* Xylella fastidiosa *across biofilm formation stages reveals a common core of virulence-associated genes."*
+*"Transcriptome profiling reveals differential expression of virulence genes in Xylella fastidiosa under nutrient-rich and xylem-like conditions."*
 
 All code is organized as self-contained Python scripts with `argparse` interfaces so that any step can be re-run independently.
 
