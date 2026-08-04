@@ -150,7 +150,11 @@ def load_virulence_phases(virulence_path: Path) -> dict[str, int]:
     """Return {PD####: phase_int} for phase 1 and 2 genes."""
     vir = pd.read_csv(virulence_path, sep=None, engine="python", encoding="latin-1")
     phase_col = next((c for c in vir.columns if "phase" in c.lower()), None)
-    id_col    = next((c for c in vir.columns if "gene id" in c.lower()), None)
+    id_col    = next(
+        (c for c in vir.columns
+         if "gene_id" in c.lower() or "gene id" in c.lower()),
+        None,
+    )
     if phase_col is None or id_col is None:
         return {}
     result: dict[str, int] = {}
