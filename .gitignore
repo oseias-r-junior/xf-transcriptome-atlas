@@ -17,6 +17,14 @@ Thumbs.db
 # --- Leftover / superseded directories (kept locally, not for GitHub) ---
 results/wgcna_original/
 
+# --- Figures, raw flask photographs, and all intermediate/final pipeline
+#     outputs: entirely regenerable by running the scripts in 01-07 against
+#     your own full-size data/ files (see README.md for the stage-by-stage
+#     commands). Not distributed through GitHub. ---
+figures/
+photos/
+results/
+
 # --- Debris from git-init attempts blocked by OneDrive file locks on this
 #     machine; harmless, safe to delete by hand once OneDrive fully
 #     releases them (see rm failures logged during setup) ---
@@ -24,14 +32,12 @@ results/wgcna_original/
 .git_stale2/
 .git_stale3/
 
-# --- Publication-resolution figures: regenerable from scripts + data, kept
-#     out of git because several exceed GitHub's 100MB per-file hard limit
-#     (e.g. fig_5_network.tiff ~413MB, fig_3A/3B ~129MB each). Regenerate
-#     with the corresponding 05_figures/*.py script -- see README.md for
-#     the full figure -> script mapping. ---
+# --- Belt-and-suspenders: .tiff/.tif are also caught by figures/ and photos/
+#     above, but this catches stray copies elsewhere too. FIJI/masks/ is a
+#     placeholder the user fills with their own images (see that folder's
+#     README.md), so it's exempted. ---
 *.tiff
 *.tif
-!photos/*.tif
 !07_biofilm_quantification/FIJI/masks/*.tif
 
 # --- Large intermediate/example inputs not needed to run the pipeline from
@@ -51,6 +57,14 @@ results/wgcna_original/
 #     deletion); safe to delete by hand. ---
 data/9a5c.gbff
 data/Temecula1.gbff
+
+# --- Only tpm_expression.csv / sample_info.csv are shipped as the data/
+#     format examples; these companion files are not distributed (see
+#     data/README.md for how to regenerate each). Left on disk as leftover
+#     debris (OneDrive lock); safe to delete by hand. ---
+data/tpm_expression_original.csv
+data/tpm_expression_wgcna.csv
+data/sample_info_original.csv
 
 # --- GO-enrichment result folders beyond the one representative example kept
 #     in data/deseq2_go_results/ (see that folder + data/README.md): full

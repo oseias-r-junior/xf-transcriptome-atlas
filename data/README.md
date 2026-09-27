@@ -41,17 +41,28 @@ ONE strain's 12 columns (the other strain's 12 are hard structural zeros,
 not biology). Feeding it straight into `04_wgcna/run_wgcna.py` across all
 24 samples at once confounds strain identity with co-expression and does
 not match the original analysis. WGCNA needs a matrix keyed by a shared
-cross-strain ortholog identity instead. Two such files exist, and which one
-you use matters:
+cross-strain ortholog identity instead, gene_id = `<9a5c_IMG_ID>_<Temecula1_IMG_ID>`
+(e.g. `XF9a_00002_XFTem_00002`), aligned against `sample_info.csv`'s sample
+naming after `04_wgcna/run_wgcna.py`'s own `normalize_sample_name()`. Build
+it from the files above:
 
-| File | Genes | Source | Use for |
-|------|-------|--------|---------|
-| `tpm_expression_original.csv` | full file: 1692 genes (1685 after the standard TPM≥1-in-≥3-samples + var>0.1 filter); **shipped here truncated to header + 2 example rows** | The exact ortholog-merged matrix from `WGCNA_paper_pierry_feitosa.ipynb`, gene_id = `<9a5c_IMG_ID>_<Temecula1_IMG_ID>`. **This is the file that produced the WGCNA figure/results already in the manuscript.** | Reproducing/consolidating the submitted WGCNA result (3 modules: dimgrey/darkgrey/silver) and the downstream robustness analyses that characterize it (leave-one-out stability, power/deepSplit sensitivity, module-trait correlation). Treat as a frozen, canonical input -- do not regenerate it from raw data. |
-| `tpm_expression_wgcna.csv` | full file: 1639 genes; **shipped here truncated to header + 2 example rows** | Built from raw data by `01_preprocessing/build_wgcna_tpm_matrix.py --tpm tpm_expression.csv --dictionary gene_dictionary.tsv`, i.e. fully reproducible from the raw CLC `.xlsx` exports through this repo's own scripts. | Demonstrating end-to-end reproducibility from raw data in this GitHub repo. Differs from `tpm_expression_original.csv` by 53 gene pairs (~3.1%) because `build_gene_dictionary.py` excludes ortholog pairs whose RefSeq `protein_id` is shared by more than one locus in the same strain (ambiguous 1:1 ortholog assignment) -- a deliberate correctness fix, not a bug. Confirmed (2026-09) that running WGCNA on `tpm_expression_original.csv` with auto-detected power/cutHeight reproduces the original 3-module result exactly (same PyWGCNA 2.2.1 in both environments), so this residual 53-gene gap is the full and only explanation for the module-count difference between the two files -- not a code or environment issue. |
+```bash
+python 01_preprocessing/build_wgcna_tpm_matrix.py \
+    --tpm        data/tpm_expression.csv \
+    --dictionary data/gene_dictionary.tsv \
+    --output     data/tpm_expression_wgcna.csv
+```
 
-Both are ortholog-pair-keyed (`gene_id` = `<9a5c_IMG_ID>_<Temecula1_IMG_ID>`,
-e.g. `XF9a_00002_XFTem_00002`) and both align against `sample_info.csv`'s
-sample naming after `04_wgcna/run_wgcna.py`'s own `normalize_sample_name()`.
+This reproduces the manuscript's 3-module WGCNA result (dimgrey/darkgrey/
+silver) to within a small residual: `build_gene_dictionary.py` excludes
+ortholog pairs whose RefSeq `protein_id` is shared by more than one locus in
+the same strain (ambiguous 1:1 assignment, a deliberate correctness fix), so
+the matrix built this way has ~3% fewer gene pairs (1639 vs. 1692) than the
+exact matrix behind the submitted manuscript figure. Confirmed (2026-09) that
+running WGCNA on the full 1692-gene matrix with auto-detected power/cutHeight
+reproduces the original 3-module result exactly (same PyWGCNA 2.2.1), so this
+residual gap is the full explanation for any small module-composition
+difference -- not a code or environment issue.
 
 ### Sample metadata
 

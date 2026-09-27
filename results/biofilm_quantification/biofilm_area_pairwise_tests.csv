@@ -1,9 +1,0 @@
-contrast,medium,phase,n_9a5c,n_Temecula1,mean_9a5c,mean_Temecula1,t,df,p_raw,n_early,n_late,mean_early,mean_late,p_BH,significant_BH_0.05
-strain (9a5c vs Temecula1),PIM6,early,2.0,2.0,61409.0,124854.0,-1.3221,1.7303,0.334,,,,,0.334,False
-strain (9a5c vs Temecula1),PIM6,late,4.0,2.0,331234.25,250832.0,2.1871,3.0566,0.1149,,,,,0.2522,False
-strain (9a5c vs Temecula1),PWG,early,5.0,3.0,246649.0,406792.3333,-5.872,5.7548,0.0013,,,,,0.01,True
-strain (9a5c vs Temecula1),PWG,late,2.0,2.0,307782.0,173961.5,1.6169,1.4111,0.2952,,,,,0.334,False
-"phase (early vs late), 9a5c",PIM6,-,,,,,-4.9724,2.7298,0.0195,2.0,4.0,61409.0,331234.25,0.0779,False
-"phase (early vs late), 9a5c",PWG,-,,,,,-1.5115,1.7667,0.2852,5.0,2.0,246649.0,307782.0,0.334,False
-"phase (early vs late), Temecula1",PIM6,-,,,,,-4.7294,1.0366,0.1261,2.0,2.0,124854.0,250832.0,0.2522,False
-"phase (early vs late), Temecula1",PWG,-,,,,,3.0164,1.1151,0.1826,3.0,2.0,406792.3333,173961.5,0.2922,False
