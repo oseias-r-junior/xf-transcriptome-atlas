@@ -1,0 +1,13 @@
+Condition 1 (c1),Condition 2 (c2),comparison,n_tested,n_DEG,n_up_in_c1,n_down_in_c1,error
+9a5c_PIM6_1d,9a5c_PIM6_3d,9a5c_PIM6_1d_vs_9a5c_PIM6_3d,2533,86,82,4,
+9a5c_PWG_3d,9a5c_PWG_10d,9a5c_PWG_3d_vs_9a5c_PWG_10d,2532,0,0,0,
+Tem1_PIM6_1d,Tem1_PIM6_3d,Tem1_PIM6_1d_vs_Tem1_PIM6_3d,2267,68,56,12,
+Tem1_PWG_3d,Tem1_PWG_7d,Tem1_PWG_3d_vs_Tem1_PWG_7d,2261,1,0,1,
+9a5c_PIM6_1d,9a5c_PWG_3d,9a5c_PIM6_1d_vs_9a5c_PWG_3d,2533,6,2,4,
+9a5c_PIM6_3d,9a5c_PWG_10d,9a5c_PIM6_3d_vs_9a5c_PWG_10d,2538,26,4,22,
+Tem1_PIM6_1d,Tem1_PWG_3d,Tem1_PIM6_1d_vs_Tem1_PWG_3d,2264,2,1,1,
+Tem1_PIM6_3d,Tem1_PWG_7d,Tem1_PIM6_3d_vs_Tem1_PWG_7d,2264,12,3,9,
+9a5c_PIM6_1d,Tem1_PIM6_1d,9a5c_PIM6_1d_vs_Tem1_PIM6_1d,1635,48,27,21,
+9a5c_PIM6_3d,Tem1_PIM6_3d,9a5c_PIM6_3d_vs_Tem1_PIM6_3d,1636,163,80,83,
+9a5c_PWG_3d,Tem1_PWG_3d,9a5c_PWG_3d_vs_Tem1_PWG_3d,1635,40,27,13,
+9a5c_PWG_10d,Tem1_PWG_7d,9a5c_PWG_10d_vs_Tem1_PWG_7d,1634,31,19,12,

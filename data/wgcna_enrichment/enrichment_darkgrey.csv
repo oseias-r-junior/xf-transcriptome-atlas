@@ -1,0 +1,95 @@
+GO_ID,Module_Count,Module_Size,Background_Count,Background_Size,Odds_Ratio,P_value,P_adj_BH,Significant,GO_Label,Level2_ID,Level2_Label
+GO:0003735,22,91,110,2619,8.840579710144928,4.180347931371056e-12,6.395932334997715e-10,True,structural constituent of ribosome [Evidence IEA],GO:0003735,structural constituent of ribosome [Evidence IEA]
+GO:0006412,22,91,118,2619,8.077294685990339,1.8654736227372937e-11,1.4270873213940296e-09,True,translation [Evidence IEA],GO:0008152,metabolic process [Evidence IEA]
+GO:0015986,8,91,16,2619,30.36144578313253,1.601165477851724e-08,8.165943937043793e-07,True,proton motive force-driven ATP synthesis [Evidence IEA],GO:0008152,metabolic process [Evidence IEA]
+GO:0046933,6,91,10,2619,44.54117647058823,2.8052047896375574e-07,1.0729908320363657e-05,True,"proton-transporting ATP synthase activity, rotational mechanism [Evidence IEA]",GO:0016874,ligase activity [Evidence IEA]
+GO:0015935,6,91,12,2619,29.67058823529412,1.1665010429416371e-06,3.56949319140141e-05,True,small ribosomal subunit [Evidence IEA],GO:1990904,GO:1990904
+GO:0005840,10,91,62,2619,5.878442545109212,3.7788608012578156e-05,0.000963609504320743,True,ribosome [Evidence IEA],GO:0043226,GO:0043226
+GO:0045259,4,91,8,2619,29.011494252873565,8.588244783595902e-05,0.0016425018148627161,True,proton-transporting ATP synthase complex [Evidence IEA],GO:0098803,GO:0098803
+GO:0015415,4,91,8,2619,29.011494252873565,8.588244783595902e-05,0.0016425018148627161,True,ATPase-coupled phosphate ion transmembrane transporter activity [Evidence IEA],GO:0042626,ATPase-coupled transmembrane transporter activity [Evidence IEA]
+GO:0050661,4,91,12,2619,14.482758620689655,0.0005454676926733102,0.0038074039362699158,True,NADP binding [Evidence IEA],GO:1901265,GO:1901265
+GO:0003899,4,91,13,2619,12.86845466155811,0.0007670702832985251,0.0038074039362699158,True,DNA-directed RNA polymerase activity [Evidence IEA],GO:0140640,GO:0140640
+GO:0006817,4,91,14,2619,11.577011494252874,0.0010455361326923815,0.0038074039362699158,True,phosphate ion transport [Evidence IEA],GO:0051234,GO:0051234
+GO:0055052,4,91,14,2619,11.577011494252874,0.0010455361326923815,0.0038074039362699158,True,"ATP-binding cassette (ABC) transporter complex, substrate-binding subunit-containing [Evidence IEA]",GO:0098796,GO:0098796
+GO:0032955,2,91,2,2619,inf,0.0011944796662807578,0.0038074039362699158,True,regulation of division septum assembly [Evidence IEA],GO:0050789,GO:0050789
+GO:0019205,2,91,2,2619,inf,0.0011944796662807578,0.0038074039362699158,True,nucleobase-containing compound kinase activity [Evidence IEA],GO:0016740,transferase activity [Evidence IEA]
+GO:0000413,2,91,2,2619,inf,0.0011944796662807578,0.0038074039362699158,True,protein peptidyl-prolyl isomerization [Evidence IEA],GO:0008152,metabolic process [Evidence IEA]
+GO:0003934,2,91,2,2619,inf,0.0011944796662807578,0.0038074039362699158,True,GTP cyclohydrolase I activity [Evidence IEA],GO:0016787,hydrolase activity [Evidence IEA]
+GO:0016114,2,91,2,2619,inf,0.0011944796662807578,0.0038074039362699158,True,terpenoid biosynthetic process [Evidence IEA],GO:0008152,metabolic process [Evidence IEA]
+GO:0008097,2,91,2,2619,inf,0.0011944796662807578,0.0038074039362699158,True,5S rRNA binding [Evidence IEA],GO:0003676,nucleic acid binding [Evidence IEA]
+GO:0045900,2,91,2,2619,inf,0.0011944796662807578,0.0038074039362699158,True,negative regulation of translational elongation [Evidence IEA],GO:0050789,GO:0050789
+GO:0018117,2,91,2,2619,inf,0.0011944796662807578,0.0038074039362699158,True,protein adenylylation [Evidence IEA],GO:0008152,metabolic process [Evidence IEA]
+GO:0004478,2,91,2,2619,inf,0.0011944796662807578,0.0038074039362699158,True,methionine adenosyltransferase activity [Evidence IEA],GO:0016740,transferase activity [Evidence IEA]
+GO:0006556,2,91,2,2619,inf,0.0011944796662807578,0.0038074039362699158,True,S-adenosylmethionine biosynthetic process [Evidence IEA],GO:0008152,metabolic process [Evidence IEA]
+GO:0006139,2,91,2,2619,inf,0.0011944796662807578,0.0038074039362699158,True,nucleobase-containing compound metabolic process [Evidence IEA],GO:0008152,metabolic process [Evidence IEA]
+GO:0015833,2,91,2,2619,inf,0.0011944796662807578,0.0038074039362699158,True,peptide transport [Evidence IEA],GO:0051234,GO:0051234
+GO:0008924,2,91,2,2619,inf,0.0011944796662807578,0.0038074039362699158,True,L-malate dehydrogenase (quinone) activity [Evidence IEA],GO:0016491,oxidoreductase activity [Evidence IEA]
+GO:0018454,2,91,2,2619,inf,0.0011944796662807578,0.0038074039362699158,True,acetoacetyl-CoA reductase activity [Evidence IEA],GO:0016491,oxidoreductase activity [Evidence IEA]
+GO:0005048,2,91,2,2619,inf,0.0011944796662807578,0.0038074039362699158,True,signal sequence binding [Evidence IEA],GO:0005048,signal sequence binding [Evidence IEA]
+GO:0048501,2,91,2,2619,inf,0.0011944796662807578,0.0038074039362699158,True,"signal recognition particle, plasma membrane targeting [Evidence IEA]",GO:1990904,GO:1990904
+GO:0035435,2,91,2,2619,inf,0.0011944796662807578,0.0038074039362699158,True,phosphate ion transmembrane transport [Evidence IEA],GO:0055085,transmembrane transport [Evidence IEA]
+GO:0042301,2,91,2,2619,inf,0.0011944796662807578,0.0038074039362699158,True,phosphate ion binding [Evidence IEA],GO:0036094,GO:0036094
+GO:0071709,2,91,2,2619,inf,0.0011944796662807578,0.0038074039362699158,True,membrane assembly [Evidence IEA],GO:0071840,GO:0071840
+GO:0006694,2,91,2,2619,inf,0.0011944796662807578,0.0038074039362699158,True,steroid biosynthetic process [Evidence IEA],GO:0008152,metabolic process [Evidence IEA]
+GO:0003854,2,91,2,2619,inf,0.0011944796662807578,0.0038074039362699158,True,3-beta-hydroxy-Delta5-steroid dehydrogenase (NAD+) activity [Evidence IEA],GO:0016491,oxidoreductase activity [Evidence IEA]
+GO:0009029,2,91,2,2619,inf,0.0011944796662807578,0.0038074039362699158,True,tetraacyldisaccharide 4'-kinase activity [Evidence IEA],GO:0016740,transferase activity [Evidence IEA]
+GO:0006741,2,91,2,2619,inf,0.0011944796662807578,0.0038074039362699158,True,NADP biosynthetic process [Evidence IEA],GO:0008152,metabolic process [Evidence IEA]
+GO:0003951,2,91,2,2619,inf,0.0011944796662807578,0.0038074039362699158,True,NAD+ kinase activity [Evidence IEA],GO:0016740,transferase activity [Evidence IEA]
+GO:0019674,2,91,2,2619,inf,0.0011944796662807578,0.0038074039362699158,True,NAD metabolic process [Evidence IEA],GO:0008152,metabolic process [Evidence IEA]
+GO:0051604,2,91,2,2619,inf,0.0011944796662807578,0.0038074039362699158,True,protein maturation [Evidence IEA],GO:0008152,metabolic process [Evidence IEA]
+GO:1990229,2,91,2,2619,inf,0.0011944796662807578,0.0038074039362699158,True,iron-sulfur cluster assembly complex [Evidence IEA],GO:1990229,iron-sulfur cluster assembly complex [Evidence IEA]
+GO:0004088,2,91,2,2619,inf,0.0011944796662807578,0.0038074039362699158,True,carbamoyl-phosphate synthase (glutamine-hydrolyzing) activity [Evidence IEA],GO:0016874,ligase activity [Evidence IEA]
+GO:0006541,2,91,2,2619,inf,0.0011944796662807578,0.0038074039362699158,True,glutamine metabolic process [Evidence IEA],GO:0008152,metabolic process [Evidence IEA]
+GO:0042619,2,91,2,2619,inf,0.0011944796662807578,0.0038074039362699158,True,poly-hydroxybutyrate biosynthetic process [Evidence IEA],GO:0008152,metabolic process [Evidence IEA]
+GO:0050515,2,91,2,2619,inf,0.0011944796662807578,0.0038074039362699158,True,4-(cytidine 5'-diphospho)-2-C-methyl-D-erythritol kinase activity [Evidence IEA],GO:0016740,transferase activity [Evidence IEA]
+GO:1904680,2,91,2,2619,inf,0.0011944796662807578,0.0038074039362699158,True,peptide transmembrane transporter activity [Evidence IEA],GO:0022857,transmembrane transporter activity [Evidence IEA]
+GO:0008177,2,91,2,2619,inf,0.0011944796662807578,0.0038074039362699158,True,succinate dehydrogenase (quinone) activity [Evidence IEA],GO:0016491,oxidoreductase activity [Evidence IEA]
+GO:0004722,2,91,2,2619,inf,0.0011944796662807578,0.0038074039362699158,True,protein serine/threonine phosphatase activity [Evidence IEA],GO:0140096,GO:0140096
+GO:0051537,2,91,2,2619,inf,0.0011944796662807578,0.0038074039362699158,True,"2 iron, 2 sulfur cluster binding [Evidence IEA]",GO:0036094,GO:0036094
+GO:0016722,2,91,2,2619,inf,0.0011944796662807578,0.0038074039362699158,True,"oxidoreductase activity, acting on metal ions [Evidence IEA]",GO:0016491,oxidoreductase activity [Evidence IEA]
+GO:0046872,12,91,129,2619,3.130152547874067,0.0013675303203900936,0.0042700436534629455,True,metal ion binding [Evidence IEA],GO:0036094,GO:0036094
+GO:0044423,4,91,16,2619,9.639846743295019,0.00180202237985245,0.005514188482348497,True,virion component [Evidence IEA],GO:0044423,virion component [Evidence IEA]
+GO:0016491,6,91,39,2619,5.336898395721925,0.0019282351327294096,0.005784705398188229,True,oxidoreductase activity [Evidence IEA],GO:0016491,oxidoreductase activity [Evidence IEA]
+GO:0051536,4,91,17,2619,8.894783377541998,0.002294425320540798,0.0067509052700527325,True,iron-sulfur cluster binding [Evidence IEA],GO:0036094,GO:0036094
+GO:0034220,2,91,3,2619,56.78651685393258,0.003502194298575566,0.009742467776037484,True,monoatomic ion transmembrane transport [Evidence IEA],GO:0055085,transmembrane transport [Evidence IEA]
+GO:0009037,2,91,3,2619,56.78651685393258,0.003502194298575566,0.009742467776037484,True,tyrosine-based site-specific recombinase activity [Evidence IEA],GO:0140640,GO:0140640
+GO:0070967,2,91,3,2619,56.78651685393258,0.003502194298575566,0.009742467776037484,True,coenzyme F420 binding [Evidence IEA],GO:0097367,carbohydrate derivative binding [Evidence IEA]
+GO:0016887,8,91,78,2619,3.3845094664371773,0.004959185520972955,0.01354920329837254,True,ATP hydrolysis activity [Evidence IEA],GO:0016787,hydrolase activity [Evidence IEA]
+GO:0006364,4,91,21,2619,6.7910750507099396,0.005186862036022984,0.013682584336405457,True,rRNA processing [Evidence IEA],GO:0008152,metabolic process [Evidence IEA]
+GO:0005198,4,91,21,2619,6.7910750507099396,0.005186862036022984,0.013682584336405457,True,structural molecule activity [Evidence IEA],GO:0005198,structural molecule activity [Evidence IEA]
+GO:0043190,4,91,22,2619,6.411238825031928,0.00617332306416367,0.014154564879403435,True,ATP-binding cassette (ABC) transporter complex [Evidence IEA],GO:0098796,GO:0098796
+GO:0006099,4,91,22,2619,6.411238825031928,0.00617332306416367,0.014154564879403435,True,tricarboxylic acid cycle [Evidence IEA],GO:0008152,metabolic process [Evidence IEA]
+GO:0008199,2,91,4,2619,28.382022471910112,0.006845998699842184,0.014154564879403435,True,ferric iron binding [Evidence IEA],GO:0036094,GO:0036094
+GO:0004784,2,91,4,2619,28.382022471910112,0.006845998699842184,0.014154564879403435,True,superoxide dismutase activity [Evidence IEA],GO:0004784,superoxide dismutase activity [Evidence IEA]
+GO:0046654,2,91,4,2619,28.382022471910112,0.006845998699842184,0.014154564879403435,True,tetrahydrofolate biosynthetic process [Evidence IEA],GO:0008152,metabolic process [Evidence IEA]
+GO:0008914,2,91,4,2619,28.382022471910112,0.006845998699842184,0.014154564879403435,True,leucyl-tRNA--protein transferase activity [Evidence IEA],GO:0140096,GO:0140096
+GO:0000918,2,91,4,2619,28.382022471910112,0.006845998699842184,0.014154564879403435,True,division septum site selection [Evidence IEA],GO:0022402,GO:0022402
+GO:0004834,2,91,4,2619,28.382022471910112,0.006845998699842184,0.014154564879403435,True,tryptophan synthase activity [Evidence IEA],GO:0016829,lyase activity [Evidence IEA]
+GO:0016829,2,91,4,2619,28.382022471910112,0.006845998699842184,0.014154564879403435,True,lyase activity [Evidence IEA],GO:0016829,lyase activity [Evidence IEA]
+GO:0000103,2,91,4,2619,28.382022471910112,0.006845998699842184,0.014154564879403435,True,sulfate assimilation [Evidence IEA],GO:0008152,metabolic process [Evidence IEA]
+GO:0006801,2,91,4,2619,28.382022471910112,0.006845998699842184,0.014154564879403435,True,superoxide metabolic process [Evidence IEA],GO:0008152,metabolic process [Evidence IEA]
+GO:0004783,2,91,4,2619,28.382022471910112,0.006845998699842184,0.014154564879403435,True,sulfite reductase (NADPH) activity [Evidence IEA],GO:0016491,oxidoreductase activity [Evidence IEA]
+GO:0009337,2,91,4,2619,28.382022471910112,0.006845998699842184,0.014154564879403435,True,sulfite reductase complex (NADPH) [Evidence IEA],GO:0140535,GO:0140535
+GO:0070733,2,91,4,2619,28.382022471910112,0.006845998699842184,0.014154564879403435,True,AMPylase activity [Evidence IEA],GO:0016740,transferase activity [Evidence IEA]
+GO:0006006,2,91,4,2619,28.382022471910112,0.006845998699842184,0.014154564879403435,True,glucose metabolic process [Evidence IEA],GO:0008152,metabolic process [Evidence IEA]
+GO:0006470,2,91,4,2619,28.382022471910112,0.006845998699842184,0.014154564879403435,True,protein dephosphorylation [Evidence IEA],GO:0008152,metabolic process [Evidence IEA]
+GO:0006508,8,91,88,2619,2.9493975903614458,0.01023214303922419,0.02087357180001735,True,proteolysis [Evidence IEA],GO:0008152,metabolic process [Evidence IEA]
+GO:0008234,2,91,5,2619,18.913857677902623,0.011152665324494559,0.022160490839580098,True,cysteine-type peptidase activity [Evidence IEA],GO:0140096,GO:0140096
+GO:0009253,2,91,5,2619,18.913857677902623,0.011152665324494559,0.022160490839580098,True,peptidoglycan catabolic process [Evidence IEA],GO:0008152,metabolic process [Evidence IEA]
+GO:0016757,4,91,28,2619,4.796934865900383,0.014742080468066575,0.02813666139912334,True,glycosyltransferase activity [Evidence IEA],GO:0016740,transferase activity [Evidence IEA]
+GO:0006207,2,91,6,2619,14.179775280898877,0.016352709905236358,0.02813666139912334,True,'de novo' pyrimidine nucleobase biosynthetic process [Evidence IEA],GO:0008152,metabolic process [Evidence IEA]
+GO:0004518,2,91,6,2619,14.179775280898877,0.016352709905236358,0.02813666139912334,True,nuclease activity [Evidence IEA],GO:0140640,GO:0140640
+GO:0016620,2,91,6,2619,14.179775280898877,0.016352709905236358,0.02813666139912334,True,"oxidoreductase activity, acting on the aldehyde or oxo group of donors, NAD or NADP as acceptor [Evidence IEA]",GO:0016491,oxidoreductase activity [Evidence IEA]
+GO:0000314,2,91,6,2619,14.179775280898877,0.016352709905236358,0.02813666139912334,True,organellar small ribosomal subunit [Evidence IEA],GO:1990904,GO:1990904
+GO:0008381,2,91,6,2619,14.179775280898877,0.016352709905236358,0.02813666139912334,True,mechanosensitive monoatomic ion channel activity [Evidence IEA],GO:0022857,transmembrane transporter activity [Evidence IEA]
+GO:0000270,2,91,6,2619,14.179775280898877,0.016352709905236358,0.02813666139912334,True,peptidoglycan metabolic process [Evidence IEA],GO:0008152,metabolic process [Evidence IEA]
+GO:0016791,2,91,6,2619,14.179775280898877,0.016352709905236358,0.02813666139912334,True,phosphatase activity [Evidence IEA],GO:0016787,hydrolase activity [Evidence IEA]
+GO:0003989,2,91,6,2619,14.179775280898877,0.016352709905236358,0.02813666139912334,True,acetyl-CoA carboxylase activity [Evidence IEA],GO:0016874,ligase activity [Evidence IEA]
+GO:0009035,2,91,6,2619,14.179775280898877,0.016352709905236358,0.02813666139912334,True,type I site-specific deoxyribonuclease activity [Evidence IEA],GO:0008094,"ATP-dependent activity, acting on DNA [Evidence IEA]"
+GO:0019843,2,91,6,2619,14.179775280898877,0.016352709905236358,0.02813666139912334,True,rRNA binding [Evidence IEA],GO:0003676,nucleic acid binding [Evidence IEA]
+GO:0007155,3,91,16,2619,6.59527972027972,0.016367077545895278,0.02813666139912334,True,cell adhesion [Evidence IEA],GO:0007155,cell adhesion [Evidence IEA]
+GO:0003824,4,91,29,2619,4.603218390804598,0.01665573111324426,0.028314742892515243,True,catalytic activity [Evidence IEA],GO:0003824,catalytic activity [Evidence IEA]
+GO:0008168,4,91,33,2619,3.961950059453032,0.025830265591701353,0.04342890808275063,True,methyltransferase activity [Evidence IEA],GO:0016740,transferase activity [Evidence IEA]
+GO:0006351,2,91,8,2619,9.44569288389513,0.029172716043964986,0.04748325058219832,True,DNA-templated transcription [Evidence IEA],GO:0008152,metabolic process [Evidence IEA]
+GO:0009317,2,91,8,2619,9.44569288389513,0.029172716043964986,0.04748325058219832,True,acetyl-CoA carboxylase complex [Evidence IEA],GO:1902494,GO:1902494
+GO:0022627,2,91,8,2619,9.44569288389513,0.029172716043964986,0.04748325058219832,True,cytosolic small ribosomal subunit [Evidence IEA],GO:1990904,GO:1990904

@@ -1,0 +1,5 @@
+go_term,go_description,deg_count,bg_count,deg_total,bg_total,deg_percentage,bg_percentage,fold_enrichment,odds_ratio,p_value,p_adj
+GO:0004333,fumarate hydratase activity [Evidence IEA],1,1,1,1318,100.0,0.07587253414264036,1318.0,inf,0.001516300227445034,0.0020217336365933787
+GO:0045239,tricarboxylic acid cycle heteromeric enzyme complex [Evidence IEA],1,1,1,1318,100.0,0.07587253414264036,1318.0,inf,0.001516300227445034,0.0020217336365933787
+GO:0006106,fumarate metabolic process [Evidence IEA],1,1,1,1318,100.0,0.07587253414264036,1318.0,inf,0.001516300227445034,0.0020217336365933787
+GO:0006099,tricarboxylic acid cycle [Evidence IEA],1,11,1,1318,100.0,0.834597875569044,119.81818181818183,inf,0.009097801364670205,0.009097801364670205

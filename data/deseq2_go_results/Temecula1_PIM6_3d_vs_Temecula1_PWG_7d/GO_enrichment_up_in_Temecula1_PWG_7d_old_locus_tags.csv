@@ -1,0 +1,3 @@
+go_term,go_description,deg_count,bg_count,deg_total,bg_total,deg_percentage,bg_percentage,fold_enrichment,odds_ratio,p_value,p_adj
+GO:0004781,sulfate adenylyltransferase (ATP) activity [Evidence IEA],1,1,1,1244,100.0,0.08038585209003216,1244.0,inf,0.001606425702811245,0.0024096385542168677
+GO:0000103,sulfate assimilation [Evidence IEA],1,2,1,1244,100.0,0.1607717041800643,622.0,inf,0.0024096385542168677,0.0024096385542168677

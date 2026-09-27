@@ -1,0 +1,37 @@
+sample_id,condition,strain,medium,timepoint,replicate,is_plasmid,normalized_from_hour,source_file,status,n_genes
+9a5c_PIM6_1d_rep1,9a5c_PIM6_1d,9a5c,PIM6,1d,1,False,False,FPKM/9a5c/PIM6/9a5c-PIM6-1d-1_S2_L001_R1_001 (paired) (GE).xlsx,OK,2639
+9a5c_PIM6_1d_rep2,9a5c_PIM6_1d,9a5c,PIM6,1d,2,False,False,FPKM/9a5c/PIM6/9a5c-PIM6-1d-2_S1_L001_R1_001 (paired) (GE).xlsx,OK,2639
+9a5c_PIM6_1d_rep3,9a5c_PIM6_1d,9a5c,PIM6,1d,3,False,False,FPKM/9a5c/PIM6/9a5c-PIM6-1d-3_S1_L001_R1_001_paired_GE.xlsx,OK,2639
+9a5c_PIM6_3d_rep1,9a5c_PIM6_3d,9a5c,PIM6,3d,1,False,False,FPKM/9a5c/PIM6/9a5c-PIM6-3d-1_S1_L001_R1_001 (paired) (GE).xlsx,OK,2639
+9a5c_PIM6_3d_rep2,9a5c_PIM6_3d,9a5c,PIM6,3d,2,False,False,FPKM/9a5c/PIM6/9a5c-PIM6-3d-2_S2_L001_R1_001 (paired) (GE).xlsx,OK,2639
+9a5c_PIM6_3d_rep3,9a5c_PIM6_3d,9a5c,PIM6,3d,3,False,False,FPKM/9a5c/PIM6/9a5c-PIM6-3d-3_S2_L001_R1_001_paired_GE.xlsx,OK,2639
+9a5c_PIM6_1d_rep1,9a5c_PIM6_1d,9a5c,PIM6,1d,1,True,False,FPKM/9a5c/PIM6/pXF51/9a5c-PIM6-1d-1_S2_L001_R1_001 (paired) (GE)_pXF51.xlsx,OK,69
+9a5c_PIM6_1d_rep2,9a5c_PIM6_1d,9a5c,PIM6,1d,2,True,False,FPKM/9a5c/PIM6/pXF51/9a5c-PIM6-1d-2_S1_L001_R1_001 (paired) (GE)_pXF51.xlsx,OK,69
+9a5c_PIM6_1d_rep3,9a5c_PIM6_1d,9a5c,PIM6,1d,3,True,False,FPKM/9a5c/PIM6/pXF51/9a5c-PIM6-1d-3_S1_L001_R1_001_paired_GE_pXF51.xlsx,OK,69
+9a5c_PIM6_3d_rep1,9a5c_PIM6_3d,9a5c,PIM6,3d,1,True,False,FPKM/9a5c/PIM6/pXF51/9a5c-PIM6-3d-1_S1_L001_R1_001_paired_GE_pXF51.xlsx,OK,69
+9a5c_PIM6_3d_rep2,9a5c_PIM6_3d,9a5c,PIM6,3d,2,True,False,FPKM/9a5c/PIM6/pXF51/9a5c-PIM6-3d-2_S2_L001_R1_001_paired_GE_pXF51.xlsx,OK,69
+9a5c_PIM6_3d_rep3,9a5c_PIM6_3d,9a5c,PIM6,3d,3,True,False,FPKM/9a5c/PIM6/pXF51/9a5c-PIM6-3d-3_S2_L001_R1_001_paired_GE_pXF51.xlsx,OK,69
+9a5c_PWG_10d_rep1,9a5c_PWG_10d,9a5c,PWG,10d,1,False,False,FPKM/9a5c/PWG/9a5c-PWG-10d-1_S1_L001_R1_001 (paired) (GE).xlsx,OK,2639
+9a5c_PWG_10d_rep2,9a5c_PWG_10d,9a5c,PWG,10d,2,False,False,FPKM/9a5c/PWG/9a5c-PWG-10d-2_S5_L001_R1_001 (paired) (GE).xlsx,OK,2639
+9a5c_PWG_10d_rep3,9a5c_PWG_10d,9a5c,PWG,10d,3,False,False,FPKM/9a5c/PWG/9a5c-PWG-10d-3_S4_L001_R1_001_paired_GE.xlsx,OK,2639
+9a5c_PWG_3d_rep1,9a5c_PWG_3d,9a5c,PWG,3d,1,False,False,FPKM/9a5c/PWG/9a5c-PWG-3d-1_S4_L001_R1_001 (paired) (GE).xlsx,OK,2639
+9a5c_PWG_3d_rep2,9a5c_PWG_3d,9a5c,PWG,3d,2,False,False,FPKM/9a5c/PWG/9a5c-PWG-3d-2_S1_L001_R1_001 (paired) (GE).xlsx,OK,2639
+9a5c_PWG_3d_rep3,9a5c_PWG_3d,9a5c,PWG,3d,3,False,False,FPKM/9a5c/PWG/9a5c-PWG-3d-3_S3_L001_R1_001_paired_GE.xlsx,OK,2639
+9a5c_PWG_10d_rep1,9a5c_PWG_10d,9a5c,PWG,10d,1,True,False,FPKM/9a5c/PWG/pXF51/9a5c-PWG-10d-1_S1_L001_R1_001 (paired) (GE)_pXF51.xlsx,OK,69
+9a5c_PWG_10d_rep2,9a5c_PWG_10d,9a5c,PWG,10d,2,True,False,FPKM/9a5c/PWG/pXF51/9a5c-PWG-10d-2_S5_L001_R1_001 (paired) (GE)_pXF51.xlsx,OK,69
+9a5c_PWG_10d_rep3,9a5c_PWG_10d,9a5c,PWG,10d,3,True,False,FPKM/9a5c/PWG/pXF51/9a5c-PWG-10d-3_S4_L001_R1_001_paired_GE_pXF51.xlsx,OK,69
+9a5c_PWG_3d_rep1,9a5c_PWG_3d,9a5c,PWG,3d,1,True,False,FPKM/9a5c/PWG/pXF51/9a5c-PWG-3d-1_S4_L001_R1_001 (paired) (GE)_pXF51.xlsx,OK,69
+9a5c_PWG_3d_rep2,9a5c_PWG_3d,9a5c,PWG,3d,2,True,False,FPKM/9a5c/PWG/pXF51/9a5c-PWG-3d-2_S1_L001_R1_001 (paired) (GE)_pXF51.xlsx,OK,69
+9a5c_PWG_3d_rep3,9a5c_PWG_3d,9a5c,PWG,3d,3,True,False,FPKM/9a5c/PWG/pXF51/9a5c-PWG-3d-3_S3_L001_R1_001_paired_GE_pXF51.xlsx,OK,69
+Tem1_PIM6_1d_rep1,Tem1_PIM6_1d,Temecula1,PIM6,1d,1,False,False,FPKM/Tem1/PIM6/Tem-PIM6-1d-1_S3_L001_R1_001 (paired) (GE).xlsx,OK,2476
+Tem1_PIM6_1d_rep2,Tem1_PIM6_1d,Temecula1,PIM6,1d,2,False,False,FPKM/Tem1/PIM6/Tem-PIM6-1d-2_S3_L001_R1_001 (paired) (GE).xlsx,OK,2476
+Tem1_PIM6_1d_rep3,Tem1_PIM6_1d,Temecula1,PIM6,1d,3,False,False,FPKM/Tem1/PIM6/Tem-PIM6-1d-3_S5_L001_R1_001_paired_GE.xlsx,OK,2476
+Tem1_PIM6_3d_rep1,Tem1_PIM6_3d,Temecula1,PIM6,3d,1,False,False,FPKM/Tem1/PIM6/Tem-PIM6-3d-1_S4_L001_R1_001 (paired) (GE).xlsx,OK,2476
+Tem1_PIM6_3d_rep2,Tem1_PIM6_3d,Temecula1,PIM6,3d,2,False,False,FPKM/Tem1/PIM6/Tem-PIM6-3d-2_S5_L001_R1_001 (paired) (GE).xlsx,OK,2476
+Tem1_PIM6_3d_rep3,Tem1_PIM6_3d,Temecula1,PIM6,3d,3,False,False,FPKM/Tem1/PIM6/Tem-PIM6-3d-3_S6_L001_R1_001_paired_GE.xlsx,OK,2476
+Tem1_PWG_3d_rep1,Tem1_PWG_3d,Temecula1,PWG,3d,1,False,False,FPKM/Tem1/PWG/Tem-PWG-3d-1_S4_L001_R1_001 (paired) (GE).xlsx,OK,2476
+Tem1_PWG_3d_rep2,Tem1_PWG_3d,Temecula1,PWG,3d,2,False,False,FPKM/Tem1/PWG/Tem-PWG-3d-2_S3_L001_R1_001 (paired) (GE).xlsx,OK,2476
+Tem1_PWG_3d_rep3,Tem1_PWG_3d,Temecula1,PWG,3d,3,False,False,FPKM/Tem1/PWG/Tem-PWG-3d-3_S7_L001_R1_001_paired_GE.xlsx,OK,2476
+Tem1_PWG_7d_rep1,Tem1_PWG_7d,Temecula1,PWG,7d,1,False,False,FPKM/Tem1/PWG/Tem-PWG-7d-1_S3_L001_R1_001 (paired) (GE).xlsx,OK,2476
+Tem1_PWG_7d_rep2,Tem1_PWG_7d,Temecula1,PWG,7d,2,False,False,FPKM/Tem1/PWG/Tem-PWG-7d-2_S2_L001_R1_001 (paired) (GE).xlsx,OK,2476
+Tem1_PWG_7d_rep3,Tem1_PWG_7d,Temecula1,PWG,7d,3,False,False,FPKM/Tem1/PWG/Tem-PWG-7d-3_S8_L001_R1_001_paired_GE.xlsx,OK,2476

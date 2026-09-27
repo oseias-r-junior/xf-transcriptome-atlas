@@ -1,0 +1,9 @@
+strain,medium,phase,mean_area,sd_area,n,se_area
+9a5c,PIM6,early,61409.0,56673.19,2,40074.0
+9a5c,PIM6,late,331234.25,73176.33,4,36588.16
+9a5c,PWG,early,246649.0,46015.14,5,20578.6
+9a5c,PWG,late,307782.0,49241.5,2,34819.0
+Temecula1,PIM6,early,124854.0,37331.0,2,26397.0
+Temecula1,PIM6,late,250832.0,5050.16,2,3571.0
+Temecula1,PWG,early,406792.33,30998.27,3,17896.86
+Temecula1,PWG,late,173961.5,106186.93,2,75085.5

@@ -1,0 +1,97 @@
+Temecula1_gene_id,Gene,Description,Function,Phase
+PD0985,,DUF769 domain-containing protein,Hypothetical or Uncharacterized Proteins,
+PD2084,,DUF769 domain-containing protein,Hypothetical or Uncharacterized Proteins,
+PD0540,,conserved hypothetical protein,Hypothetical or Uncharacterized Proteins,
+PD1311,,Acyl-coenzyme A (acyl-CoA) synthetase,Metabolism & Enzymatic Functions,
+PD0915,zot,Putative Zot-like toxin - filamentous phage Cf1c related protein,Pathogenesis / Toxins / Virulence Factors,
+PD0928,zot,Putative Zot-like toxin - filamentous phage Cf1c related protein,Pathogenesis / Toxins / Virulence Factors,
+PD0593,,RNA polymerase sigma factor,Regulation & Signal Transduction,
+PD0636,,ribosomal subunit interface protein,Regulation & Signal Transduction,
+PD0682,,Transcriptional regulators,Regulation & Signal Transduction,
+PD1025,,Nitrogen regulatory protein PII,Regulation & Signal Transduction,
+PD1994,,PAS domain S-box/diguanylate cyclase (GGDEF) domain,Regulation & Signal Transduction,
+PD2048,rpoH,alternative sigma factor RpoH,Regulation & Signal Transduction,
+PD1100,,mRNA-degrading endonuclease (mRNA interferase) YafQ toxin of type II toxin-antitoxin system,Regulation & Signal Transduction,
+PD0092,lexA,"SOS regulatory protein LexA (EC:3,4,21,88)",Stress Response & Survival,
+PD1380,csp1,Cold shock protein,Stress Response & Survival,
+PD1829,,"Beta-glucosidase-related glycosidases (EC:3,2,1,21)",Cell Wall Degradation & Hydrolytic Enzymes,mobile
+PD0090,,putative pectin-lyase,Cell Wall Degradation & Hydrolytic Enzymes,mobile
+PD0313,,serine protease/autotransporter-associated beta strand repeat protein,Cell Wall Degradation & Hydrolytic Enzymes,mobile
+PD0519,,Acetyl esterase/lipase,Cell Wall Degradation & Hydrolytic Enzymes,mobile
+PD0529,cbsA,"1,4-beta-cellobiosidase",Cell Wall Degradation & Hydrolytic Enzymes,mobile
+PD0950,,Serine protease/autotransporter-associated beta strand repeat protein,Cell Wall Degradation & Hydrolytic Enzymes,mobile
+PD1211,,Putative secreted lipase (lipases/esterases),Cell Wall Degradation & Hydrolytic Enzymes,mobile
+PD1485,pglA,Polygalacturonase: pit membrane degradation,Cell Wall Degradation & Hydrolytic Enzymes,mobile
+PD1640,,Beta-glucosidase,Cell Wall Degradation & Hydrolytic Enzymes,mobile
+PD1702,lesB,Lipase/esterase,Cell Wall Degradation & Hydrolytic Enzymes,mobile
+PD1703,lesA,Lipase/esterase,Cell Wall Degradation & Hydrolytic Enzymes,mobile
+PD1826,chiA,Chitinase,Cell Wall Degradation & Hydrolytic Enzymes,mobile
+PD1833,,beta-galactosidase,Cell Wall Degradation & Hydrolytic Enzymes,mobile
+PD1851,engXCA2,Endoglucanase: pit membrane degradation,Cell Wall Degradation & Hydrolytic Enzymes,mobile
+PD1856,engXCA1,Endoglucanase: pit membrane degradation,Cell Wall Degradation & Hydrolytic Enzymes,mobile
+PD1879,,Lipase/esterase,Cell Wall Degradation & Hydrolytic Enzymes,mobile
+PD2061,,"endo-1,4-beta-glucanase",Cell Wall Degradation & Hydrolytic Enzymes,mobile
+PD1403,,Multidrug efflux pump,Membrane & Transport Proteins,mobile
+PD1709,,Outer membrane protein and related peptidoglycan-associated (lipo)proteins,Membrane & Transport Proteins,mobile
+PD0794,xatC,Uncharacterized membrane protein,Membrane & Transport Proteins,mobile
+PD0843,tonB1,Iron and vitamin B12 transport,Membrane & Transport Proteins,mobile
+PD0855,,VirK protein,Pathogenesis / Toxins / Virulence Factors,mobile
+PD0536,,Hemolysins and related proteins containing CBS domains,Pathogenesis / Toxins / Virulence Factors,mobile
+PD1427,,Calcium binding protein - RTX toxin-related,Pathogenesis / Toxins / Virulence Factors,mobile
+PD1506,,Hemolysin-type calcium binding domain protein,Pathogenesis / Toxins / Virulence Factors,mobile
+PD0020,pilV,type IV pilus modification protein PilV,Pilus & Motility / Secretion Systems,mobile
+PD0023,pilY1a,PilY1 homolog,Pilus & Motility / Secretion Systems,mobile
+PD0502,pilY1b,PilY1 homolog,Pilus & Motility / Secretion Systems,mobile
+PD0732,xpsE,Type II secretion system: ATPase,Pilus & Motility / Secretion Systems,mobile
+PD0848,pilL,Type IV pilus: regulates twitching,Pilus & Motility / Secretion Systems,mobile
+PD1611,pilY,type IV pilus assembly protein PilY1,Pilus & Motility / Secretion Systems,mobile
+PD1691,pilQ,type IV pilus secretin (or competence protein) PilQ,Pilus & Motility / Secretion Systems,mobile
+PD1693,pilO,type IV pilus assembly protein PilO,Pilus & Motility / Secretion Systems,mobile
+PD1924,pilA1,Pilin protein - long type IV pili,Pilus & Motility / Secretion Systems,mobile
+PD1926,pilA2,Pilin protein - long type IV pili,Pilus & Motility / Secretion Systems,mobile
+PD1964,tolC,Type I secretion system,Pilus & Motility / Secretion Systems,mobile
+PD0218,,Serine protease autotransporter,Proteolysis & Peptidases,mobile
+PD0472,clp,ATP-dependent Clp protease,Proteolysis & Peptidases,mobile
+PD0657,,Putative extracellular serine protease,Proteolysis & Peptidases,mobile
+PD0701,hslVU,ATP-dependent protease HslVU,Proteolysis & Peptidases,mobile
+PD0856,,"Zn-dependent oligopeptidases (EC:3,4,15,5)",Proteolysis & Peptidases,mobile
+PD0956,prtA,Serine protease,Proteolysis & Peptidases,mobile
+PD1629,,Membrane protease subunits,Proteolysis & Peptidases,mobile
+PD1850,,Peptidase (M20/M25/M40 family),Proteolysis & Peptidases,mobile
+PD1995,,"Zn-dependent protease with chaperone function (EC:3,4,24,-)",Proteolysis & Peptidases,mobile
+PD0058,fimF,"Fimbrial adhesin: cell-cell aggregation, biofilm formation",Adhesion & Surface Attachment,sessile
+PD0062,fimA,"Fimbrial adhesin: cell-cell aggregation, biofilm formation",Adhesion & Surface Attachment,sessile
+PD0528,xatA,Autotransporter beta- domain protein,Adhesion & Surface Attachment,sessile
+PD0731,xadA1,"Afimbrial adhesin: cell surface attachment, biofilm formation",Adhesion & Surface Attachment,sessile
+PD0744,xadA2,Afimbrial adhesin,Adhesion & Surface Attachment,sessile
+PD0824,xadA3,Afimbrial adhesin,Adhesion & Surface Attachment,sessile
+PD0986,,Putative haemagglutinin-like protein,Adhesion & Surface Attachment,sessile
+PD1249,,Hemagglutinin-like secreted protein,Adhesion & Surface Attachment,sessile
+PD1379,xatB,Autotransporter beta- domain protein,Adhesion & Surface Attachment,sessile
+PD1792,hxfB,Haemagglutinin: cell-cell aggregation,Adhesion & Surface Attachment,sessile
+PD2118,hxfA,Haemagglutinin: cell-cell aggregation,Adhesion & Surface Attachment,sessile
+PD0639,LptA,Lipopolysaccharide transport periplasmic protein LptA,Polysaccharide / EPS Biosynthesis,sessile
+PD0814,wzy,O-antigen ligase family protein,Polysaccharide / EPS Biosynthesis,sessile
+PD0815,,Glycosyltransferase family 2 protein,Polysaccharide / EPS Biosynthesis,sessile
+PD0816,,CDP-glycerol glycerophosphotransferase family protein,Polysaccharide / EPS Biosynthesis,sessile
+PD1391,gumH,Exopolysaccharide synthesis,Polysaccharide / EPS Biosynthesis,sessile
+PD1394,gumD,Exopolysaccharide synthesis,Polysaccharide / EPS Biosynthesis,sessile
+PD1452,,Lipopolysaccharide core biosynthesis protein,Polysaccharide / EPS Biosynthesis,sessile
+PD1801,,Lipopolysaccharide biosynthesis protein (transferase),Polysaccharide / EPS Biosynthesis,sessile
+PD0233,rpfB,"DSF synthesis, quorum sensing",Quorum Sensing & Cell-Cell Communication,sessile
+PD0405,rpfG,Response regulator containing a CheY-like receiver domain and an HD-GYP domain (RpfG),Quorum Sensing & Cell-Cell Communication,sessile
+PD0406,rpfC,"Response regulator, quorum sensing",Quorum Sensing & Cell-Cell Communication,sessile
+PD0407,rpfF,"DSF synthase, quorum sensing",Quorum Sensing & Cell-Cell Communication,sessile
+PD0279,cgsA,"Cyclic di-GMP synthase A, quorum sensing",Quorum Sensing & Cell-Cell Communication,sessile
+PD0268,cheY,Response regulator containing a CheY-like receiver domain and an HTH DNA-binding domain,Regulation & Signal Transduction,sessile
+PD0422,wrbA,Multimeric flavodoxin WrbA,Regulation & Signal Transduction,sessile
+PD0520,araC,AraC-type DNA-binding domain-containing proteins,Regulation & Signal Transduction,sessile
+PD0534,,poly(hydroxyalkanoate) granule-associated protein,Regulation & Signal Transduction,sessile
+PD1386,xhpT,"Two-component regulatory system: pathogenicity-related genes, EPS synthesis",Regulation & Signal Transduction,sessile
+PD1671,,Two-component regulatory system: pathogenicity-related genes,Regulation & Signal Transduction,sessile
+PD1678,phoQ,"Two-component regulatory system: pathogenicity-related genes, survival genes",Regulation & Signal Transduction,sessile
+PD1679,phoP,"Two-component regulatory system: pathogenicity-related genes, survival genes",Regulation & Signal Transduction,sessile
+PD1984,gacA,Two-component regulatory system: pathogenicity-related genes,Regulation & Signal Transduction,sessile
+PD1284,algU,"Alternate sigma factor: pathogenicity-related genes, stress response",Regulation & Signal Transduction,sessile
+PD1920,,Signal transduction histidine kinase,Regulation & Signal Transduction,sessile
+PD1099,dinJ/relE,"Toxin-anti-toxin system, regulatory system",Regulation & Signal Transduction,sessile
