@@ -1,9 +1,18 @@
 # Data directory
 
-This directory holds the input data files required to run the pipeline.
-**Raw data are not included in this repository** to respect data-sharing
-agreements and file-size constraints. The table below describes the expected
-format and origin of each file.
+This directory documents the input data files the pipeline expects. **None of
+the files here carry the real dataset.** Every file is either a downloadable
+public reference (genomes), or has been truncated to its header plus one or
+two example rows -- just enough to show the exact schema each script expects
+and let every script run end-to-end on a toy input. This keeps the format
+self-documenting without redistributing raw sequencing data, unpublished
+bench measurements, or full manuscript results through GitHub.
+
+To reproduce the actual pipeline outputs, replace each file below with your
+own full-size version in the same format (built via `01_preprocessing/*.py`,
+BLASTP/QuickGO for the bundled inputs, or your own Fiji/ImageJ measurements
+for the biofilm files -- see each subsection for specifics), then re-run the
+corresponding stage.
 
 Place the corresponding files at the paths indicated before running any script.
 
@@ -37,8 +46,8 @@ you use matters:
 
 | File | Genes | Source | Use for |
 |------|-------|--------|---------|
-| `tpm_expression_original.csv` | 1692 (1685 after the standard TPM≥1-in-≥3-samples + var>0.1 filter) | The exact ortholog-merged matrix from `WGCNA_paper_pierry_feitosa.ipynb`, gene_id = `<9a5c_IMG_ID>_<Temecula1_IMG_ID>`. **This is the file that produced the WGCNA figure/results already in the manuscript.** | Reproducing/consolidating the submitted WGCNA result (3 modules: dimgrey/darkgrey/silver) and the downstream robustness analyses that characterize it (leave-one-out stability, power/deepSplit sensitivity, module-trait correlation). Treat as a frozen, canonical input -- do not regenerate it from raw data. |
-| `tpm_expression_wgcna.csv` | 1639 | Built from raw data by `01_preprocessing/build_wgcna_tpm_matrix.py --tpm tpm_expression.csv --dictionary gene_dictionary.tsv`, i.e. fully reproducible from the raw CLC `.xlsx` exports through this repo's own scripts. | Demonstrating end-to-end reproducibility from raw data in this GitHub repo. Differs from `tpm_expression_original.csv` by 53 gene pairs (~3.1%) because `build_gene_dictionary.py` excludes ortholog pairs whose RefSeq `protein_id` is shared by more than one locus in the same strain (ambiguous 1:1 ortholog assignment) -- a deliberate correctness fix, not a bug. Confirmed (2026-09) that running WGCNA on `tpm_expression_original.csv` with auto-detected power/cutHeight reproduces the original 3-module result exactly (same PyWGCNA 2.2.1 in both environments), so this residual 53-gene gap is the full and only explanation for the module-count difference between the two files -- not a code or environment issue. |
+| `tpm_expression_original.csv` | full file: 1692 genes (1685 after the standard TPM≥1-in-≥3-samples + var>0.1 filter); **shipped here truncated to header + 2 example rows** | The exact ortholog-merged matrix from `WGCNA_paper_pierry_feitosa.ipynb`, gene_id = `<9a5c_IMG_ID>_<Temecula1_IMG_ID>`. **This is the file that produced the WGCNA figure/results already in the manuscript.** | Reproducing/consolidating the submitted WGCNA result (3 modules: dimgrey/darkgrey/silver) and the downstream robustness analyses that characterize it (leave-one-out stability, power/deepSplit sensitivity, module-trait correlation). Treat as a frozen, canonical input -- do not regenerate it from raw data. |
+| `tpm_expression_wgcna.csv` | full file: 1639 genes; **shipped here truncated to header + 2 example rows** | Built from raw data by `01_preprocessing/build_wgcna_tpm_matrix.py --tpm tpm_expression.csv --dictionary gene_dictionary.tsv`, i.e. fully reproducible from the raw CLC `.xlsx` exports through this repo's own scripts. | Demonstrating end-to-end reproducibility from raw data in this GitHub repo. Differs from `tpm_expression_original.csv` by 53 gene pairs (~3.1%) because `build_gene_dictionary.py` excludes ortholog pairs whose RefSeq `protein_id` is shared by more than one locus in the same strain (ambiguous 1:1 ortholog assignment) -- a deliberate correctness fix, not a bug. Confirmed (2026-09) that running WGCNA on `tpm_expression_original.csv` with auto-detected power/cutHeight reproduces the original 3-module result exactly (same PyWGCNA 2.2.1 in both environments), so this residual 53-gene gap is the full and only explanation for the module-count difference between the two files -- not a code or environment issue. |
 
 Both are ortholog-pair-keyed (`gene_id` = `<9a5c_IMG_ID>_<Temecula1_IMG_ID>`,
 e.g. `XF9a_00002_XFTem_00002`) and both align against `sample_info.csv`'s
@@ -56,14 +65,19 @@ sample_id,condition,strain,medium,timepoint,is_mobile,is_sessile
 9a5c_PIM6_1d_1,9a5c_PIM6_1d,9a5c,PIM6,1d,0,0
 ```
 
-### Reference genome files
+### Reference genome files -- not distributed here, download directly from NCBI
 
-| File | Format | Description |
-|------|--------|-------------|
-| `9a5c.gbff` | GenBank flat file | *X. fastidiosa* 9a5c annotated genome (RefSeq/NCBI). |
-| `Temecula1.gbff` | GenBank flat file | *X. fastidiosa* Temecula1 annotated genome. |
+| File | Format | NCBI RefSeq accessions |
+|------|--------|-------------------------|
+| `9a5c.gbff` | GenBank flat file | Chromosome `NC_002488` (2.68 Mb) + plasmids `NC_002489` (1.3 kb) and `NC_002490` (pXF51, 51 kb) |
+| `Temecula1.gbff` | GenBank flat file | Chromosome `NC_004556` (2.52 Mb) + plasmid `NC_004554` (pXF51, 1.3 kb) |
 
-Both files are available from NCBI under their respective accession numbers.
+These are standard, publicly available NCBI RefSeq records -- not reproduced
+here. Download each accession's GenBank flat file from
+[ncbi.nlm.nih.gov/nuccore](https://www.ncbi.nlm.nih.gov/nuccore) (or via
+`efetch -db nuccore -id <accession> -format gbwithparts`) and concatenate the
+chromosome + plasmid record(s) for each strain into a single `9a5c.gbff` /
+`Temecula1.gbff` at this path.
 
 ### Cross-strain gene dictionary
 
@@ -76,8 +90,8 @@ systems for the same gene). The three required inputs:
 
 | File | Format | Origin |
 |------|--------|--------|
-| `9a5c_vs_Temecula1_rbh.csv` | CSV, 2 columns (`9a5c_protein_ID`, `Temecula1_protein_ID`) | Precomputed reciprocal-best-hit (RBH) pairs from BLASTP of the two strains' proteomes (protein sequence vs protein sequence), run separately/upstream of this repo. This is the **only** cross-strain link the dictionary uses. **Bundled in this repository.** |
-| `annot_comprator_9a5c.csv` / `annot_comprator_Temecula1.csv` | TSV (despite the `.csv` extension), one row per gene | Per-strain table linking, for each gene, its old locus tag + product/length (`annot_1.*`), a secondary NCBI-style numbering kept only for reference (`annot_2.*`), and the **IMG ID** used throughout this repository (`XF9a_#####` / `XFTem_#####`) + IMG product/length (`annot_3.*`). Pre-existing colleague-computed NCBI↔IMG cross-references; does not carry `protein_id`. **Bundled in this repository.** |
+| `9a5c_vs_Temecula1_rbh.csv` | CSV, 2 columns (`9a5c_protein_ID`, `Temecula1_protein_ID`) | Precomputed reciprocal-best-hit (RBH) pairs from BLASTP of the two strains' proteomes (protein sequence vs protein sequence), run separately/upstream of this repo. This is the **only** cross-strain link the dictionary uses. **Shipped here truncated to header + 2 example rows** — regenerate the full set by running reciprocal BLASTP between the two strains' RefSeq protein FASTA files (downloadable from the NCBI accessions above). |
+| `annot_comprator_9a5c.csv` / `annot_comprator_Temecula1.csv` | TSV (despite the `.csv` extension), one row per gene | Per-strain table linking, for each gene, its old locus tag + product/length (`annot_1.*`), a secondary NCBI-style numbering kept only for reference (`annot_2.*`), and the **IMG ID** used throughout this repository (`XF9a_#####` / `XFTem_#####`) + IMG product/length (`annot_3.*`). NCBI↔IMG cross-references, generated from IMG (img.jgi.doe.gov) exports for each strain; does not carry `protein_id`. **Shipped here truncated to header + 1 example row.** |
 | `9a5c.gbff` / `Temecula1.gbff` | GenBank flat file | See "Reference genome files" above. Parsed only to recover, per `old_locus_tag`, the `protein_id` that bridges the RBH pairs to the IMG IDs in the annotation-comparator tables. |
 
 Join logic: for each strain, `old_locus_tag` (from the GenBank file, matched
@@ -112,22 +126,22 @@ These two files are **included in the repository** under `data/` and do not need
 
 | File | Format | Origin |
 |------|--------|--------|
-| `dictionary_2_level.csv` | CSV, no header | Level-2 GO term dictionary. Columns: `level`, `category_name`, `GO_id`, `term`, `relation`. Used by `03_go_enrichment/build_go_heatmap.py` and `05_figures/fig_go_bubble.py`. **Bundled in this repository.** Originally generated by [oseias-r-junior/Gene_Ontology_2nd_Level](https://github.com/oseias-r-junior/Gene_Ontology_2nd_Level); the version included here is the one used in the analyses reported in Feitosa-Junior et al. (2025). |
-| `ancestor_cache.json` | JSON | GO id → list of ancestor GO ids, as originally fetched from QuickGO when the Figure 4C analysis was run. Used by `fig_go_bubble.py` to collapse specific GO terms to their Level-2 ancestor without needing internet access. **Bundled in this repository** (339 entries — covers the GO ids that were actually significant in the original run; a GO id not in the cache is only matched against the dictionary as itself, not via its ancestors, which is a known limitation for any newly-computed enrichment result outside the original analysis). |
+| `dictionary_2_level.csv` | CSV, no header | Level-2 GO term dictionary. Columns: `level`, `category_name`, `GO_id`, `term`, `relation`. Used by `03_go_enrichment/build_go_heatmap.py` and `05_figures/fig_go_bubble.py`. Originally generated by [oseias-r-junior/Gene_Ontology_2nd_Level](https://github.com/oseias-r-junior/Gene_Ontology_2nd_Level). **Shipped here truncated to 3 example rows** — regenerate the full dictionary from that companion repository. |
+| `ancestor_cache.json` | JSON | GO id → list of ancestor GO ids, as fetched from QuickGO. Used by `fig_go_bubble.py` to collapse specific GO terms to their Level-2 ancestor without needing internet access at run time (a GO id not in the cache is only matched against the dictionary as itself, not via its ancestors). **Shipped here truncated to 3 example entries** — regenerate the full cache by querying the [QuickGO REST API](https://www.ebi.ac.uk/QuickGO/) for every GO id appearing in your own `deseq2_go_results/`/`wgcna_enrichment/` output. |
 
 ### Fig 4C inputs (DESeq2 + WGCNA GO enrichment, Level-2 terms)
 
 | Path | Format | Origin |
 |------|--------|--------|
-| `deseq2_go_results/<c1>_vs_<c2>/GO_enrichment_up_in_<cond>_old_locus_tags.csv` | CSV | Per-comparison, per-direction GO enrichment (`go_term`, `go_description`, `p_adj`, …), one sub-folder per pairwise comparison. This is a **lean, CSV-only** copy of the relevant files from `DeSeq2/DESeq2_results/<comparison>/` in the source analysis folder — the source folders also contain large `.tiff` renders and count matrices that `fig_go_bubble.py` does not need. |
-| `wgcna_enrichment/enrichment_<module>.csv` | CSV | Per-module GO enrichment (`GO_ID`, `P_adj_BH`, …) for the `dimgrey`/`darkgrey`/`silver` WGCNA modules. Note: this file's own `Level2_ID`/`Level2_Label` columns are a no-op copy of `GO_ID`/`GO_Label` in the source data (not actually collapsed) — `fig_go_bubble.py` re-derives the true Level-2 term via `dictionary_2_level.csv` + `ancestor_cache.json` instead of trusting those columns. |
+| `deseq2_go_results/<c1>_vs_<c2>/GO_enrichment_up_in_<cond>_old_locus_tags.csv` | CSV | Per-comparison, per-direction GO enrichment (`go_term`, `go_description`, `p_adj`, …), one sub-folder per pairwise comparison (12 in the full dataset). This is a **lean, CSV-only** copy of the relevant files from `DeSeq2/DESeq2_results/<comparison>/` in the source analysis folder — the source folders also contain large `.tiff` renders and count matrices that `fig_go_bubble.py` does not need. **Only one representative comparison folder is shipped here, truncated to header + 2 rows each** — regenerate the rest by running `run_go_enrichment.py` on your own DESeq2 output. |
+| `wgcna_enrichment/enrichment_<module>.csv` | CSV | Per-module GO enrichment (`GO_ID`, `P_adj_BH`, …) for the `dimgrey`/`darkgrey`/`silver` WGCNA modules. Note: this file's own `Level2_ID`/`Level2_Label` columns are a no-op copy of `GO_ID`/`GO_Label` in the source data (not actually collapsed) — `fig_go_bubble.py` re-derives the true Level-2 term via `dictionary_2_level.csv` + `ancestor_cache.json` instead of trusting those columns. **Shipped here truncated to header + 2 rows per module.** |
 
 ### Biofilm ring quantification input
 
 | File | Format | Origin |
 |------|--------|--------|
-| `biofilm_ring_area_results.csv` | CSV | ImageJ/Fiji `Results` window export (Label, Area, Mean, MinThr, MaxThr) for the biofilm-ring densitometry described in Methods 2.X. One row per flask photograph; `Label` encodes strain (`9a`/`tem1`), medium (`pim6`/`pwg`) and phase (`early`/`late`), e.g. `9a_pim6_late_1`. Used by `07_biofilm_quantification/analyze_biofilm_areas.py`. |
-| `flask_width_measurements.csv` | CSV (Label, flask_width_px) | Fiji straight-line length measurement of each flask's outer width at the same row height as the ring band (Analyze > Measure, Length only), one row per photograph. Used by `07_biofilm_quantification/normalize_by_flask_width.py` to normalize ring area by (flask width)² and remove the camera-distance/zoom confound between photographs before statistical comparison — see Methods 2.X. `data/flask_width_measurements.txt` is kept alongside it as the raw Fiji Results-window export this CSV was parsed from. |
+| `biofilm_ring_area_results.csv` | CSV | ImageJ/Fiji `Results` window export (Label, Area, Mean, MinThr, MaxThr) for the biofilm-ring densitometry described in Methods 2.X. One row per flask photograph (22 in the full dataset); `Label` encodes strain (`9a`/`tem1`), medium (`pim6`/`pwg`) and phase (`early`/`late`), e.g. `9a_pim6_late_1`. Used by `07_biofilm_quantification/analyze_biofilm_areas.py`. **Shipped here truncated to header + 1 example row** — this is the authors' own Fiji measurement, not redistributed in full; regenerate your own via the Fiji workflow in `07_biofilm_quantification/FIJI/README.md` and `measure_biofilm_ring.py`. |
+| `flask_width_measurements.csv` | CSV (Label, flask_width_px) | Fiji straight-line length measurement of each flask's outer width at the same row height as the ring band (Analyze > Measure, Length only), one row per photograph. Used by `07_biofilm_quantification/normalize_by_flask_width.py` to normalize ring area by (flask width)² and remove the camera-distance/zoom confound between photographs before statistical comparison — see Methods 2.X. `data/flask_width_measurements.txt` is kept alongside it as the raw Fiji Results-window export this CSV was parsed from. **Both shipped here truncated to header + 1 example row**, same reasoning as above. |
 
 ### Fig 5 network input
 

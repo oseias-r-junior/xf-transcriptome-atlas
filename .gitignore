@@ -44,3 +44,27 @@ results/wgcna_original/
 #     layout (FPKM/<strain>/<medium>/*.xlsx [+pXF51/]) for anyone supplying
 #     their own copy of this raw data. ---
 01_preprocessing/FPKM/
+
+# --- Reference genomes, downloadable directly from NCBI (see data/README.md
+#     for accession numbers) -- not distributed here. Left on disk as
+#     leftover debris from an earlier commit (OneDrive lock prevented
+#     deletion); safe to delete by hand. ---
+data/9a5c.gbff
+data/Temecula1.gbff
+
+# --- GO-enrichment result folders beyond the one representative example kept
+#     in data/deseq2_go_results/ (see that folder + data/README.md): full
+#     regeneration comes from run_go_enrichment.py, not from files bundled
+#     here. Left on disk as leftover debris (OneDrive lock); safe to delete
+#     by hand. ---
+data/deseq2_go_results/9a5c_PIM6_1d_vs_9a5c_PWG_3d/
+data/deseq2_go_results/9a5c_PIM6_1d_vs_Temecula1_PIM6_1d/
+data/deseq2_go_results/9a5c_PIM6_3d_vs_9a5c_PWG_10d/
+data/deseq2_go_results/9a5c_PIM6_3d_vs_Temecula1_PIM6_3d/
+data/deseq2_go_results/9a5c_PWG_10d_vs_Temecula1_PWG_7d/
+data/deseq2_go_results/9a5c_PWG_3d_vs_Temecula1_PWG_3d/
+data/deseq2_go_results/Temecula1_PIM6_1d_vs_Temecula1_PIM6_3d/
+data/deseq2_go_results/Temecula1_PIM6_3d_vs_Temecula1_PWG_7d/
+data/deseq2_go_results/9a5c_PWG_3d_vs_9a5c_PWG_10d/
+data/deseq2_go_results/Temecula1_PIM6_1d_vs_Temecula1_PWG_3d/
+data/deseq2_go_results/Temecula1_PWG_3d_vs_Temecula1_PWG_7d/
