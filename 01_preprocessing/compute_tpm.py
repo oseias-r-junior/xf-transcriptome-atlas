@@ -78,7 +78,7 @@ def counts_to_tpm(counts: pd.DataFrame, lengths: pd.Series) -> pd.DataFrame:
 
 
 # ---------------------------------------------------------------------------
-# Coverage helper (reported in Supplementary Table S2)
+# Coverage helper (reported in Supplementary Table S1)
 # ---------------------------------------------------------------------------
 
 def compute_coverage(read_length: int, n_reads: pd.Series, genome_size: int) -> pd.Series:
