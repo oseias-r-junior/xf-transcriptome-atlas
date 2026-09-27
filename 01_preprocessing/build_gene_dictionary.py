@@ -1,6 +1,6 @@
 """
 build_gene_dictionary.py — Construct the cross-strain gene correspondence
-table (gene_dictionary.tsv / Supplementary Table S4) for Xylella fastidiosa
+table (gene_dictionary.tsv / Supplementary Table S5) for Xylella fastidiosa
 strains 9a5c and Temecula1.
 
 This does NOT run BLASTP itself. Reciprocal-best-hit (RBH) identification
@@ -65,7 +65,7 @@ parallel annotation blocks (see docstring above):
 
 --gbk-9a5c / --gbk-tem: standard NCBI GenBank flat files (.gbff).
 
-Output columns (matches Supplementary Table S4 / the dictionary format
+Output columns (matches Supplementary Table S5 / the dictionary format
 already consumed by every downstream script in this repo):
     9a5c_IMG_ID, 9a5c_protein_ID, 9a5c_locus_tag, 9a5c_old_locus_tags,
     9a5c_gene, 9a5c_product_GBFF, 9a5c_product_IMG, 9a5c_IMG_length,

@@ -24,7 +24,7 @@ Data pipeline (unchanged from the original figure):
   1. Map each virulence-table gene (Temecula1 PD-tag) to the unified
      9a5c/Temecula1 gene identifier via the gene dictionary.
   2. Split genes into mobile-phase / sessile-phase groups using the
-     Phase column of the virulence table (Supplementary Table S5).
+     Phase column of the virulence table (Supplementary Table S6).
   3. For each strain x medium x timepoint(early/late) group, take the
      per-gene mean TPM across replicates, then report mean +/- SE across
      genes within each phase group (SE computed over per-gene means, N =
@@ -211,10 +211,10 @@ def parse_args(argv=None):
                    help="Field separator for --tpm. Default: auto-detect "
                         "from the file's header line (sniff_sep).")
     p.add_argument("--dictionary", required=True, type=Path,
-                    help="Gene dictionary (Supplementary Table S4 / build_gene_dictionary.py output).")
+                    help="Gene dictionary (Supplementary Table S5 / build_gene_dictionary.py output).")
     p.add_argument("--dictionary-sep", default="\t")
     p.add_argument("--virulence-table", required=True, type=Path,
-                    help="Supplementary Table S5 (virulence gene table with a Phase column).")
+                    help="Supplementary Table S6 (virulence gene table with a Phase column).")
     p.add_argument("--output", required=True, type=Path)
     return p.parse_args(argv)
 

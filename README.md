@@ -33,7 +33,7 @@ RAW DATA (CLC Genomics Workbench "Gene Expression" .xlsx exports, one per sample
    ├─ build_matrices_from_fpkm_xlsx.py   FPKM/<strain>/<medium>/*.xlsx [+pXF51/]  →  raw_counts_combined.tsv + gene_lengths.tsv
    │                                     (strain-native outer join; no ortholog merge yet)
    ├─ compute_tpm.py                     raw_counts_combined.tsv + gene_lengths.tsv  →  tpm_expression.csv
-   ├─ build_gene_dictionary.py           RBH pairs + per-strain NCBI/IMG annotations  →  gene_dictionary.tsv (Supplementary Table S4)
+   ├─ build_gene_dictionary.py           RBH pairs + per-strain NCBI/IMG annotations  →  gene_dictionary.tsv (Supplementary Table S5)
    └─ build_wgcna_tpm_matrix.py          tpm_expression.csv + gene_dictionary.tsv  →  tpm_expression_wgcna.csv (ortholog-merged, for WGCNA)
 
    (build_raw_counts_combined.py is superseded: an earlier version of this
@@ -68,7 +68,7 @@ RAW DATA (CLC Genomics Workbench "Gene Expression" .xlsx exports, one per sample
    ├─ fig_virulence_clustermap.py  Figure 4A — virulence gene log2FC heatmap
    ├─ fig_go_bubble.py             Figure 4C — combined DESeq2/WGCNA GO-term bubble plot
    ├─ fig_network.py               Figure 5 — co-expression network (WGCNA hubs, DEGs, virulence genes)
-   └─ fig_pearson_heatmap.py       Figure S2 — Pearson correlation clustermap
+   └─ fig_pearson_heatmap.py       Figure S3 — Pearson correlation clustermap
    │
    ▼
 06_stats/
@@ -78,8 +78,8 @@ RAW DATA (CLC Genomics Workbench "Gene Expression" .xlsx exports, one per sample
    ▼
 07_biofilm_quantification/
    ├─ recompute_from_embedded_roi.py    FIJI/masks/*.tif (embedded ImageJ ROI)  →  biofilm_ring_area_results_otsu.csv (per-image Otsu threshold)
-   ├─ diagnose_threshold_coverage.py    visual QC contact sheet  →  figures/fig_S1A_biofilm_threshold_qc_contact_sheet.png
-   ├─ normalize_by_flask_width.py       ring area ÷ (flask width)²  →  figures/fig_S1B_biofilm_ring_area_normalized.tiff
+   ├─ diagnose_threshold_coverage.py    visual QC contact sheet  →  figures/fig_S1_biofilm_threshold_qc_contact_sheet.png
+   ├─ normalize_by_flask_width.py       ring area ÷ (flask width)²  →  figures/fig_S2_biofilm_ring_area_normalized.tiff
    ├─ analyze_biofilm_areas.py          Welch t-tests + BH correction, strain/medium/phase contrasts
    └─ measure_biofilm_ring.py           single-image demonstration/verification of the Fiji processing chain (--demo mode needs no input photo)
 ```
@@ -269,7 +269,7 @@ python 04_wgcna/wgcna_sensitivity.py \
     --outdir     results/WGCNA_sensitivity
 ```
 
-`wgcna_stability.py` (leave-one-out: does the 3-module structure survive removing any single sample?) and `wgcna_sensitivity.py` (does it survive a power ± 1 / deepSplit 1-3 sweep?) both require PyWGCNA — they are not reimplemented in pure NumPy, since re-deriving `cutreeHybrid`'s dendrogram-cut behaviour by hand risks silently producing different module boundaries than PyWGCNA would.
+`wgcna_stability.py` (leave-one-out: does the 3-module structure survive removing any single sample?) and `wgcna_sensitivity.py` (does it survive a power ± 1 / deepSplit 1-3 sweep?) both require PyWGCNA — they are not reimplemented in pure NumPy, since re-deriving `cutreeHybrid`'s dendrogram-cut behaviour by hand risks silently producing different module boundaries than PyWGCNA would. These two checks are kept as optional, on-demand analyses -- runnable from this repository but not tied to a numbered manuscript figure or table.
 
 ---
 
@@ -323,7 +323,7 @@ python 05_figures/fig_network.py \
 
 python 05_figures/fig_pearson_heatmap.py \
     --tpm data/tpm_expression.csv --metadata data/sample_info.csv \
-    --output figures/fig_S2_pearson_heatmap.tiff
+    --output figures/fig_S3_pearson_heatmap.tiff
 ```
 
 The PCoA (Figure 2A) and the factor-specific PERMANOVA below both use Euclidean distance on the raw (non-log-transformed) TPM matrix, matching the original analysis notebook's `pdist()` call exactly. Log2(TPM+1)/Bray-Curtis alternatives exist as flags (`--log-transform`, `--metric`) purely for sensitivity comparison; they are off by default and are not the metric behind the reported results.
@@ -376,8 +376,8 @@ python 07_biofilm_quantification/analyze_biofilm_areas.py \
 
 Steps 1-2 read from `07_biofilm_quantification/FIJI/masks/` by default. **These 22 background-subtracted flask TIFFs are the authors' own manual Fiji measurements and are not distributed with this repository** — `FIJI/masks/` ships as an empty placeholder (see `FIJI/README.md` for the expected file format) so the folder's role is unambiguous; place your own copies there, or pass `--masks-dir /path/to/your/masks`, before running steps 1-2.
 
-- Figure S1A — `figures/fig_S1A_biofilm_threshold_qc_contact_sheet.png` (step 2 output)
-- Figure S1B — `figures/fig_S1B_biofilm_ring_area_normalized.tiff` (step 3 output)
+- Figure S1 — `figures/fig_S1_biofilm_threshold_qc_contact_sheet.png` (step 2 output)
+- Figure S2 — `figures/fig_S2_biofilm_ring_area_normalized.tiff` (step 3 output)
 
 ---
 

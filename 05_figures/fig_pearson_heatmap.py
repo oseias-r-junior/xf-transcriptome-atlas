@@ -1,6 +1,6 @@
 """
 fig_pearson_heatmap.py — Hierarchically clustered Pearson correlation heatmap
-of condition-level expression profiles (Figure S1).
+of condition-level expression profiles (Figure S3).
 
 Two input modes:
   (a) Pre-computed correlation matrix (CSV) — use when the values come from a
@@ -14,13 +14,13 @@ Usage
 # the values published in the supplementary material):
 python fig_pearson_heatmap.py \\
     --correlation-csv data/pearson_correlation.csv \\
-    --output          figures/fig_S1_pearson_heatmap.tiff
+    --output          figures/fig_S3_pearson_heatmap.tiff
 
 # Compute directly from the TPM matrix:
 python fig_pearson_heatmap.py \\
     --tpm       data/tpm_expression.csv \\
     --metadata  data/sample_info.csv \\
-    --output    figures/fig_S1_pearson_heatmap.tiff
+    --output    figures/fig_S3_pearson_heatmap.tiff
 
 Input format for --correlation-csv (CSV with header and row index):
     ,9a-PIM6-1d,9a-PIM6-3d,...

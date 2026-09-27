@@ -92,7 +92,7 @@ chromosome + plasmid record(s) for each strain into a single `9a5c.gbff` /
 
 ### Cross-strain gene dictionary
 
-`gene_dictionary.tsv` (Supplementary Table S4) is built by
+`gene_dictionary.tsv` (Supplementary Table S5) is built by
 `01_preprocessing/build_gene_dictionary.py` from three independent
 per-strain/cross-strain sources — it does **not** run BLASTP itself, and it
 does **not** treat a GenBank `protein_id` as the IMG ID (an earlier version
@@ -131,7 +131,7 @@ These two files are **included in the repository** under `data/` and do not need
 
 | File | Format | Origin |
 |------|--------|--------|
-| `virulence_table.csv` | CSV | **Supplementary Table S5** of Feitosa-Junior et al. (2025). Export Table S5 from the supplementary XLSX and save as `virulence_table.csv`. Column names are auto-detected by scripts (case-insensitive): any column containing `gene_id` serves as the gene identifier (Temecula1 PD#### format), `Phase` as virulence phase, `Function` as functional group. Phase codes: 0=unspecific, 1=mobile, 2=sessile, 3=early, 4=late. |
+| `virulence_table.csv` | CSV | **Supplementary Table S6** of Feitosa-Junior et al. (2025). Export Table S6 from the supplementary XLSX and save as `virulence_table.csv`. Column names are auto-detected by scripts (case-insensitive): any column containing `gene_id` serves as the gene identifier (Temecula1 PD#### format), `Phase` as virulence phase, `Function` as functional group. Phase codes: 0=unspecific, 1=mobile, 2=sessile, 3=early, 4=late. |
 
 ### GO term resources
 
