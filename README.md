@@ -4,9 +4,9 @@ Reproducible bioinformatics pipeline for:
 
 **"Transcriptome profiling reveals differential expression of virulence genes in *Xylella fastidiosa* under nutrient-rich and xylem-like conditions"**
 
-Paulo M. Pierry<sup>1,2‡</sup>, Oseias R. Feitosa-Junior<sup>1,3‡*</sup>, Joaquim Martins-Junior<sup>1,4</sup>, Deibs Barbosa<sup>1,5</sup>, Aline M. da Silva<sup>1†</sup>, Paulo A. Zaini
+Paulo M. Pierry<sup>‡</sup>, Oseias R. Feitosa-Junior<sup>‡*</sup>, Joaquim Martins-Junior, Deibs Barbosa, Aline M. da Silva<sup>†</sup>, Paulo A. Zaini
 
-<sup>‡</sup> These authors contributed equally. <sup>*</sup> Corresponding author.
+<sup>‡</sup> These authors contributed equally. <sup>†</sup> in memorian. <sup>*</sup> Corresponding author. 
 
 Submitted to *Pathogens* (MDPI).
 
