@@ -60,8 +60,8 @@ RAW DATA (CLC Genomics Workbench "Gene Expression" .xlsx exports, one per sample
    │
    ▼
 05_figures/
-   ├─ fig_tpm_bubble.py            Figure 1 — TPM expression distribution bubble plot
    ├─ fig_pcoa.py                  Figure 2A — PCoA + PERMANOVA/PERMDISP (Euclidean distance, raw TPM)
+   ├─ fig_tpm_bubble.py            Figure 2B — TPM expression distribution bubble plot
    ├─ fig_upset.py                 Figure 2C — UpSet plot of expressed-gene intersections
    ├─ fig_top100_shared.py         Figure 3A — top-100 shared-gene expression trends
    ├─ fig_virulence_trends.py      Figure 3B — virulence gene trends (mobile vs. sessile)
